@@ -1,3 +1,9 @@
+import Register from "../register/register"
+
 export function App() {
-  return;
+  return (
+    <>
+      <Register></Register>
+    </>
+  )
 }

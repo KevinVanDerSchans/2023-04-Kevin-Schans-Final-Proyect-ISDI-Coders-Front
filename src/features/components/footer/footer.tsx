@@ -1,10 +1,12 @@
+import style from "./footer.module.css"
+
 export function Footer() {
-  return(
-    <footer>
+  return (
+    <footer className={style.footer}>
       <div>
-        <span>Alex & Melanie © 2023</span>
-        <address>Kevin Schans | ISDI Coders</address>
+        <span className={style.dancersNames}>Alex & Melanie © 2023</span>
+        <address className={style.companyName}>Kevin Schans | ISDI Coders</address>
       </div>
     </footer>
-  )
+  );
 }

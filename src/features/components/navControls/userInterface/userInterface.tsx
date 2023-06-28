@@ -7,7 +7,7 @@ export function UserInterface() {
   return (
     <Link to='/'>
       <div className={style.userInterfaceContainer}>
-        <FontAwesomeIcon icon={faUser} size="2x" style={{color: "#e5e5e6",}} />
+        <FontAwesomeIcon icon={faUser} size="2x" style={{color: "#e5e5e6"}} />
       </div>
     </Link>
   )

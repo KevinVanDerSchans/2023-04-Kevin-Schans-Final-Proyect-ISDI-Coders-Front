@@ -1,6 +1,6 @@
-import { AppRoutes } from "../app.routes/app.routes"
-import { Header } from "../header/header"
-import { Footer } from "../footer/footer"
+import { AppRoutes } from '../app.routes/app.routes';
+import { Header } from '../header/header';
+import { Footer } from '../footer/footer';
 
 export function App() {
   return (
@@ -9,5 +9,5 @@ export function App() {
       <Header></Header>
       <Footer></Footer>
     </>
-  )
+  );
 }

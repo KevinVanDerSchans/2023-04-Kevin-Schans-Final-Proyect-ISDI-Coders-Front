@@ -3,7 +3,6 @@ import style from "./header.module.css"
 
 export function Header() {
   return (
-    <>
       <header className={style.header}>
         <div className={style.logoContainer}>
           <Link to="/">
@@ -11,6 +10,5 @@ export function Header() {
           </Link>
         </div>
       </header>
-    </>
   );
 }

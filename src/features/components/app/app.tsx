@@ -9,5 +9,5 @@ export function App() {
       <Header></Header>
       <Footer></Footer>
     </>
-  )
+  );
 }

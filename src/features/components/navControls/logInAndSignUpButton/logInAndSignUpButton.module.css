@@ -1,0 +1,11 @@
+.logInAndSignUpButtonContainer {
+  display: flex;
+  position: relative;
+}
+
+.logInAndSignUpButton {
+  width: 8em;
+  padding: 5px 9px;
+  align-content: center;
+  font-size: 1rem;
+}

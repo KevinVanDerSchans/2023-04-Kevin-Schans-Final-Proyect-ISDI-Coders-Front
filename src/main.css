@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Calibri", serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: rgb(34, 33, 33);
+}
+
+html,
+body,
+span,
+h1,
+h2,
+h3,
+p,
+a,
+ol,
+ul,
+li,
+form,
+label,
+legend,
+menu,
+nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+ol,
+ul {
+  list-style: none;
+}

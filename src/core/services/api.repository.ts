@@ -1,7 +1,7 @@
 export class ApiRepository<T extends { id: string | number }> {
   constructor(public url: string) {}
 
-  async getAll(): Promise<T[]> {
+  async query(): Promise<T[]> {
     const response = await fetch(this.url);
     if (!response.ok) {
       const message = `Error: ${response.status}. ${response.statusText}`;

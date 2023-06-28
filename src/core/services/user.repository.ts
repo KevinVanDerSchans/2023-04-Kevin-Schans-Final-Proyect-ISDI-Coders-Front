@@ -9,7 +9,7 @@ export class UserRepository extends ApiRepository<User> {
     super(url);
   }
 
-  async getAll(): Promise<User[]> {
+  async query(): Promise<User[]> {
     const response = await fetch(this.url);
     if (!response.ok) {
       const message = `Error: ${response.status}. ${response.statusText}`;

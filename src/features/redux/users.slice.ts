@@ -15,7 +15,7 @@ const initialState: UsersState = {
 export const loadUsersAsync = createAsyncThunk(
   "users/load",
   async (repo: UserRepository) => {
-    const response = await repo.getAll();
+    const response = await repo.query();
     return response;
   }
 );

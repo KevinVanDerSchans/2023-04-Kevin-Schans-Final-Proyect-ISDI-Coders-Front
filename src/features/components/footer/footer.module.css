@@ -1,0 +1,11 @@
+footer {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  color: rgb(8, 8, 8);
+  z-index: 2;
+}

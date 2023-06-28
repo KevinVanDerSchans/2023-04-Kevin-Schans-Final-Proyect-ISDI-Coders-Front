@@ -1,9 +1,9 @@
-import Register from "../register/register"
+import { AppRoutes } from "../app.routes/app.routes"
 
 export function App() {
   return (
     <>
-      <Register></Register>
+      <AppRoutes></AppRoutes>
     </>
   )
 }

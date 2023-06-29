@@ -1,5 +1,5 @@
 import { Nav } from '../nav/nav';
-
+import { NavOptions } from '../../types/nav.options';
 
 export default function Home() {
   const options: NavOptions[] = [

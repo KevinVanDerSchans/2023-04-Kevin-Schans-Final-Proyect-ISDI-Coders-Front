@@ -3,7 +3,7 @@ import style from './logInAndSignUpButton.module.css';
 
 export function LogInAndSignUpButton() {
   return (
-    <Link to='/'>
+    <Link to='/logInAndSignUp'>
       <div className={style.logInAndSignUpButtonContainer}>
           <button className={style.logInAndSignUpButton}>Log in | Sign up</button>
       </div>

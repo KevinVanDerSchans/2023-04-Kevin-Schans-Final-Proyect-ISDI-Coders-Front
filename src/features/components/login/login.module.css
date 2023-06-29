@@ -1,0 +1,6 @@
+.logInContainer {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: rgb(130, 128, 124);
+}

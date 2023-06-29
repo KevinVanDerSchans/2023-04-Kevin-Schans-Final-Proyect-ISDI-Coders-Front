@@ -5,7 +5,7 @@ export function LogInAndSignUpVideo() {
     <section>
       <div className={style.logInAndSignUpVideoContainer}>
           <div className={style.logInAndSignUpVideoWrapper}>
-          <video role="video" className={style.logInAndSignUpVideo} src="/assets/heroVideo.mp4" muted autoPlay loop></video>
+          <video className={style.logInAndSignUpVideo} src="/assets/heroVideo.mp4" role="video" muted autoPlay loop></video>
           </div>
       </div>
     </section>

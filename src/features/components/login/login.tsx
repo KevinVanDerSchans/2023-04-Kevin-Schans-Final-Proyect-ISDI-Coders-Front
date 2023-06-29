@@ -4,6 +4,7 @@ import { SyntheticEvent } from "react";
 import { User } from "../../models/user";
 import 'animate.css';
 import Swal from "sweetalert2";
+import style from "../login/login.module.css"
 
 export default function Login() {
 
@@ -34,7 +35,7 @@ export default function Login() {
   };
 
   return (
-    <>
+    <div className={style.logInContainer}>
       <h2>Log in</h2>
       <form onSubmit={handleSubmit}>
 
@@ -51,6 +52,6 @@ export default function Login() {
         <button type="submit">Log in</button>
 
       </form>
-    </>
+      </div>
   );
 }

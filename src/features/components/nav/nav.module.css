@@ -1,0 +1,31 @@
+.navContainer {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  top: 1.9em;
+  font-size: 1.55rem;
+  color:rgb(117, 117, 102);
+  background-color: rgb(71, 68, 67);
+  z-index: -1;
+  margin-left: 5em;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  padding: 3px 42px;
+  font-weight: 600;
+}
+
+a {
+  color: rgb(234, 229, 229);
+}
+
+a:hover {
+  color: black;
+}

@@ -17,12 +17,15 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.7",
-    "react-router-dom": "^6.11.2"
-  },
-  "devDependencies": {
-    "@fortawesome/react-fontawesome": "^0.2.0",
+    "react-router-dom": "^6.11.2",
+    "@sweetalert2/theme-dark": "^5.0.15",
+    "animate.css": "^4.1.1",
+    "sweetalert2": "^11.7.12",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0"
+  },
+  "devDependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
@@ -53,18 +56,5 @@
         ]
       }
     }
-  },
-  "description": "",
-  "main": "jest.config.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/isdi-coders-2023/Kevin-Van-Der-Schans-Final-Project-Front-202304-mad.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/isdi-coders-2023/Kevin-Van-Der-Schans-Final-Project-Front-202304-mad/issues"
-  },
-  "homepage": "https://github.com/isdi-coders-2023/Kevin-Van-Der-Schans-Final-Project-Front-202304-mad#readme"
+  }
 }

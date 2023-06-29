@@ -18,6 +18,7 @@
   color: rgb(227, 223, 223);
   background-color: #922424;
   font-family: inherit;
+  margin-bottom: 4px;
 }
 
 .logInAndSignUpButton:hover {

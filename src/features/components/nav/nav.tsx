@@ -8,14 +8,18 @@ type Propstype = {
 
 export function Nav({ options }: Propstype) {
   return (
-      <nav className={style.nav}>
-        <ul>
-          {options.map((item) => (
-            <li key={item.label}>
-              <Link to={item.url}>{item.label}</Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+    <>
+      <div className={style.navContainer}>
+        <nav>
+          <ul>
+            {options.map((item) => (
+              <li key={item.label}>
+                <Link to={item.url}>{item.label}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </>
   );
 }

@@ -1,5 +1,6 @@
-import { Nav } from '../nav/nav';
+import { Header } from '../header/header';
 import { NavOptions } from '../../types/nav.options';
+import { Footer } from '../footer/footer';
 
 export default function Home() {
   const options: NavOptions[] = [
@@ -8,6 +9,9 @@ export default function Home() {
   ];
 
   return (
-    <Nav options={options}></Nav>
+    <>
+      <Header options={options}></Header>
+      <Footer></Footer>
+    </>
   );
 }

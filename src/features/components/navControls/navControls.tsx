@@ -40,6 +40,7 @@ export function NavControls() {
       ) : (
         <>
           <span onClick={handleUser}><LogInAndSignUpButton></LogInAndSignUpButton></span>
+
         </>
       )
     }

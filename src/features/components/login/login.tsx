@@ -2,6 +2,8 @@ import { useNavigate } from "react-router-dom";
 import { useUsers } from "../../hooks/use.users";
 import { SyntheticEvent } from "react";
 import { User } from "../../models/user";
+import 'animate.css';
+import Swal from "sweetalert2";
 
 export default function Login() {
 
@@ -19,6 +21,15 @@ export default function Login() {
     handleLoginUser(loggedUser as Partial<User>)
     console.log(loggedUser)
     element.reset();
+
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Welcome!',
+      showConfirmButton: false,
+      timer: 2000
+    })
+
     navigate('/');
   };
 

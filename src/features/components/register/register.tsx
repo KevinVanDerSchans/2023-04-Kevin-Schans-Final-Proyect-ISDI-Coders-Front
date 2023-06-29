@@ -1,6 +1,7 @@
 import { SyntheticEvent } from "react";
 import { useUsers } from "../../hooks/use.users";
 import { User } from "../../models/user";
+import Swal from "sweetalert2";
 
 export default function Register() {
   const { handleRegisterUser } = useUsers();
@@ -14,9 +15,12 @@ export default function Register() {
       password: (formElement.password as HTMLInputElement).value,
 
     } as unknown as Partial<User>;
-    console.log(data)
     handleRegisterUser(data);
     formElement.reset();
+
+    Swal.fire(
+      'You have successfully registered!',
+    )
   };
 
   return (

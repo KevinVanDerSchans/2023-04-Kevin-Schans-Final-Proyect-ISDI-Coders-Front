@@ -1,6 +1,6 @@
 import Login from "../login/login"
 import Register from "../register/register"
-import style from "./logInAndSignUp.module.css"
+import style from "../logInAndSignUp/logInAndSignUp.module.css"
 
 export default function LogInAndSignUp() {
   return (
@@ -8,5 +8,5 @@ export default function LogInAndSignUp() {
       <Register></Register>
       <Login></Login>
     </div>
-  )
+  );
 }

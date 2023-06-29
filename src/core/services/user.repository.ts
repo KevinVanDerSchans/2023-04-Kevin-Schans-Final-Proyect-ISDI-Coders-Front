@@ -26,6 +26,7 @@ export class UserRepository extends ApiRepository<User> {
       body: JSON.stringify(item),
       headers: { "Content-Type": "application/json" },
     });
+
     return response.json() as Promise<User>;
   }
 
@@ -35,6 +36,7 @@ export class UserRepository extends ApiRepository<User> {
       body: JSON.stringify(item),
       headers: { "Content-Type": "application/json" },
     });
+
     return response.json() as Promise<User>;
   }
 }

@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import style from "../register/register.module.css"
 
 export default function Register() {
+
   const { handleRegisterUser } = useUsers();
 
   const handleSubmit = (event: SyntheticEvent) => {
@@ -28,7 +29,7 @@ export default function Register() {
       <div className={style.signUpContainer}>
         <h2 className={style.signUpTitle}>Sign up</h2>
 
-        <form onSubmit={handleSubmit} className={style.formContainer}>
+        <form onSubmit={handleSubmit} className={style.signUpFormContainer}>
 
           <div className={style.formInputContainer}>
             <label htmlFor="user"></label>

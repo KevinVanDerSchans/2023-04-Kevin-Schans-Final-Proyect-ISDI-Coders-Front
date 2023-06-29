@@ -3,10 +3,9 @@
   height: 100%;
   position: relative;
   flex-direction: column;
-  padding: 20px;
+  padding: 28px 30px;
   border-radius: 4%;
   background-color: rgb(43,31,31,0.7);
-  margin-right: 400px;
 }
 
 .signUpTitle {
@@ -21,13 +20,12 @@
   display: flex;
   justify-content: center;
   padding: 10px 0;
-  gap: 20px;
 }
 
 input[type="text"],
 input[type="password"],
 input[type="email"] {
-  width: 13em;
+  width: 12em;
   font-size: 1.2rem;
   outline: none;
   padding: 12px 12px 12px 20px;
@@ -36,7 +34,8 @@ input[type="email"] {
 }
 
 input:focus {
-  outline: 3px solid rgb(0, 0, 0);
+  background-color: #efe7e7;
+  outline: none;
 }
 
 .signUpButton {

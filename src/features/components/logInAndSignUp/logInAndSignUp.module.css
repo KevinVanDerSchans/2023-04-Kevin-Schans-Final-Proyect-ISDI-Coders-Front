@@ -4,10 +4,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   position: fixed;
-  justify-content: center;
   align-items: center;
-  width: 60em;
+  width: 64em;
   position: absolute;
   flex-direction: row;
   z-index: 2;
+  justify-content: space-between;
 }

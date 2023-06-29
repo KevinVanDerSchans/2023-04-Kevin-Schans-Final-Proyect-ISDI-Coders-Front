@@ -4,6 +4,7 @@ import { LogInAndSignUpVideo } from "./logInAndSignUpVideo/logInAndSignUpVideo";
 import { ButtonToHomePage } from "../buttonToHomePage/buttonToHomePage";
 import style from "../logInAndSignUp/logInAndSignUp.module.css"
 
+
 export default function LogInAndSignUp() {
   return (
 

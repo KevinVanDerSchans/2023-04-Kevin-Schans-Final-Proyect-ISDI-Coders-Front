@@ -36,22 +36,25 @@ export default function Login() {
 
   return (
     <div className={style.logInContainer}>
-      <h2>Log in</h2>
-      <form onSubmit={handleSubmit}>
+      <h2 className={style.logInTitle}>Log in</h2>
 
-        <div>
-          <label htmlFor="user">User or Email</label>
-          <input type="text" id="user" name="userName"/>
+      <form onSubmit={handleSubmit} className={style.logInFormContainer}>
+
+        <div className={style.formInputContainer}>
+          <label htmlFor="user"></label>
+          <input className={style.formInput} type="text" id="user" name="userName" placeholder="Username or E-mail"/>
         </div>
 
-        <div>
-          <label htmlFor="password">Password</label>
-          <input type="password" id="password" name="password" />
+        <div className={style.formInputContainer}>
+          <label htmlFor="password"></label>
+          <input className={style.formInput} type="password" id="password" name="password" placeholder="Password"/>
         </div>
 
-        <button type="submit">Log in</button>
+        <div className={style.formInputContainer}>
+          <button className={style.logInButton} type="submit">Log in</button>
+        </div>
 
       </form>
-      </div>
+    </div>
   );
 }

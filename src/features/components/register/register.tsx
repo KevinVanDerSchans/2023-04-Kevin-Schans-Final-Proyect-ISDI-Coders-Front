@@ -16,7 +16,6 @@ export default function Register() {
     } as unknown as Partial<User>;
     console.log(data)
     handleRegisterUser(data);
-    console.log(handleRegisterUser(data))
     formElement.reset();
   };
 

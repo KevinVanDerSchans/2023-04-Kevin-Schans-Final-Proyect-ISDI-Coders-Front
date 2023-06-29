@@ -1,15 +1,16 @@
 import { useSelector, useDispatch } from "react-redux";
-import { AppDispatch, RootState } from "../../core/store/store";
+import { AppDispatch, RootState, store } from "../../core/store/store";
 import { useCallback, useMemo } from "react";
-import { loadUsersAsync, loginUserAsync, registerUserAsync } from "../redux/users.slice";
+
+import { ac, loadUsersAsync, loginUserAsync, registerUserAsync } from "../redux/users.slice";
 import { User } from "../models/user";
 import { UserRepository } from "../../core/services/user.repository";
 
 export function useUsers() {
-  const { users, currentUser } = useSelector((state: RootState) => state.users);
+  const { users, currentUser, token } = useSelector((state: RootState) => state.users);
   const dispatch: AppDispatch = useDispatch();
 
-  const url = "https://kevin-schans-alexandmelanie.onrender.com/";
+  const url = "http://localhost:4545/";
 
   const repo: UserRepository = useMemo(() => new UserRepository(url), []);
 
@@ -21,9 +22,16 @@ export function useUsers() {
     dispatch(registerUserAsync({ repo, user }));
   };
 
-  const handleLoginUser = async (id: string, user: Partial<User>) => {
-    dispatch(loginUserAsync({ repo, id, user }));
+  const handleLoginUser = async (user: Partial<User>) => {
+    await dispatch(loginUserAsync({ repo, user }));
+    const loggedUser = store.getState().users.currentUser;
+    console.log(loggedUser)
+    localStorage.setItem('userToken', loggedUser.token as string);
   };
+
+  const handleGetToken = (token: string) => {
+    dispatch(ac.getToken(token));
+  }
 
   return {
     handleLoadUsers,
@@ -31,5 +39,7 @@ export function useUsers() {
     handleRegisterUser,
     handleLoginUser,
     currentUser,
+    token: token,
+    handleGetToken,
   };
 }

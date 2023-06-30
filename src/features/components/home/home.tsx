@@ -7,6 +7,7 @@ export default function Home() {
   const options: NavOptions[] = [
     { url: '/', label: 'HOME' },
     { url: '/myCourses', label: 'MY COURSES' },
+    { url: '/contact', label: 'CONTACT '}
   ];
 
   return (

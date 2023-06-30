@@ -1,5 +1,5 @@
 import { LogInAndSignUpButton } from './log.in.and.sign.up.button/log.in.and.sign.up.button';
-import { MyCart } from './myCart/myCart';
+import { MyCart } from './my.cart/my.cart';
 import { SelectLanguage } from './selectLanguage/selectLanguage';
 import { UserInterface } from './userInterface/userInterface';
 

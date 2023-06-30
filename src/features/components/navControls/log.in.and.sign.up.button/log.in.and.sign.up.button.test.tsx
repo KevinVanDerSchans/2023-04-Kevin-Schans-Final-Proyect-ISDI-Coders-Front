@@ -22,8 +22,8 @@ describe('Given the LogInButton component', () => {
     });
 
     test('Then the button has the correct text content', () => {
-      const buttonElement = screen.getByText("Log in | Sign up");
-      expect(buttonElement).toBeInTheDocument();
+      const elementTextContent = screen.getByText("Log in | Sign up");
+      expect(elementTextContent).toBeInTheDocument();
     });
   });
 });

@@ -53,4 +53,46 @@ describe('Given the AppRoutes component', () => {
     expect(element).toBeInTheDocument();
   });
  });
+
+ describe("When it is instantiated with the Contact route", () => {
+  let element: HTMLElement;
+
+  beforeEach(async () => {
+    await act(async () => {
+      render(
+        <Router initialEntries={["/contact"]} initialIndex={2}>
+          <AppRoutes></AppRoutes>
+        </Router>
+      );
+    });
+
+  element = screen.getByText("Routes");
+  });
+
+  test("Then it should be in the document", () => {
+    expect(MockComponent).toHaveBeenCalled();
+    expect(element).toBeInTheDocument();
+    });
+  });
+
+  describe("When it is instantiated with the LogInAndSignUp route", () => {
+    let element: HTMLElement;
+
+    beforeEach(async () => {
+      await act(async () => {
+        render(
+          <Router initialEntries={["/logInAndSignUp"]} initialIndex={3}>
+            <AppRoutes></AppRoutes>
+          </Router>
+        );
+      });
+
+    element = screen.getByText("Routes");
+    });
+
+    test("Then it should be in the document", () => {
+      expect(MockComponent).toHaveBeenCalled();
+      expect(element).toBeInTheDocument();
+    });
+  });
 });

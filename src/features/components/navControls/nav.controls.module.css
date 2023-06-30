@@ -15,7 +15,8 @@
 }
 
 .logOutButton {
-  width: 6em;
+  width: 5em;
+  text-align: center;
   align-content: center;
   justify-content: center;
   align-items: center;
@@ -30,7 +31,7 @@
   color: rgb(227, 223, 223);
   background-color: #922424;
   font-family: inherit;
-  margin: 0 30px 4px 0;
+  margin: 0 30px 6px 0;
 }
 
 .logOutButton:hover {

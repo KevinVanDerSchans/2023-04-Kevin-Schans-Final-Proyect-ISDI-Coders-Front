@@ -1,3 +1,8 @@
 .myCartContainer {
-  padding-right: 10px;
+  cursor: default;
+  margin: 0 10px 6px 0;
+}
+
+.myCartIcon {
+  cursor: default;
 }

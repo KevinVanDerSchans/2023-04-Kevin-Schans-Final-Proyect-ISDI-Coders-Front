@@ -11,10 +11,10 @@ export function Nav({ options }: Propstype) {
     <>
       <div className={style.navContainer}>
         <nav>
-          <ul>
+          <ul className={style.navList}>
             {options.map((item) => (
-              <li key={item.label}>
-                <Link to={item.url}>{item.label}</Link>
+              <li className={style.navLabel} key={item.label}>
+                <Link to={item.url} className={style.navLinkItem}>{item.label}</Link>
               </li>
             ))}
           </ul>

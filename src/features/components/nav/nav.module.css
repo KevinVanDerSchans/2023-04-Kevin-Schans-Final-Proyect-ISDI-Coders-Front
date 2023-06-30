@@ -10,19 +10,20 @@
   color:rgb(117, 117, 102);
   background-color: rgb(71, 68, 67);
   z-index: -1;
-  margin-left: 5em;
+  /* TEMP margin-left: 5em; */
 }
 
-ul {
+.navList {
   display: flex;
 }
 
-li {
+.navLabel {
   padding: 3px 42px;
   font-weight: 600;
+  padding-bottom: 3px;
 }
 
-a {
+.navLinkItem {
   color: rgb(234, 229, 229);
 }
 

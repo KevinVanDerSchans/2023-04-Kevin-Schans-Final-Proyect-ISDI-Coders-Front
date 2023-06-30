@@ -1,7 +1,9 @@
 .selectLanguageContainer {
-  padding-right: 12px;
+  margin-right: 24px;
+  cursor: default;
 }
 
 .englishLanguageImage {
-  margin-top: 2px;
+  margin-bottom: 2px;
+  cursor: default;
 }

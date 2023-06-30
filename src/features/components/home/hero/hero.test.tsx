@@ -26,5 +26,24 @@ describe('Given the Hero component', () => {
       expect(element).toHaveAttribute('autoPlay');
       expect(element).toHaveAttribute('loop');
     });
+
+    test('Then the heading text should be in the document with the correct text content', () => {
+      const headingElement = screen.getByRole('heading', { level: 1 });
+
+      expect(headingElement).toBeInTheDocument();
+      expect(headingElement).toHaveTextContent('Shall we dance?');
+    });
+
+    test('Then it should render the button', () => {
+      const element = screen.getByRole("link");
+
+      expect(element).toBeInTheDocument();
+      expect(element).toHaveAttribute("href", "/myCourses");
+    });
+
+    test('Then the button should have the correct text content', () => {
+      const elementTextContent = screen.getByText("JOIN NOW");
+      expect(elementTextContent).toBeInTheDocument();
+    });
   });
 });

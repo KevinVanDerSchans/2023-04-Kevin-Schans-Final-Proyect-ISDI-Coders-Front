@@ -18,11 +18,11 @@ describe('Given the MyCart component', () => {
       const element = screen.getByRole("link");
 
       expect(element).toBeInTheDocument();
-      expect(element).toHaveAttribute("href", "/");
+      expect(element).toHaveAttribute('href', '/');
     });
 
     test('Then it should render the FontAwesomeIcon component with the correct icon', () => {
-      const iconElement = screen.getByLabelText("Online shopping cart for dance courses");
+      const iconElement = screen.getByLabelText('Online shopping cart for dance courses');
 
       expect(iconElement).toBeInTheDocument();
       expect(iconElement).toHaveClass(`fa-${faCartShopping.iconName}`);

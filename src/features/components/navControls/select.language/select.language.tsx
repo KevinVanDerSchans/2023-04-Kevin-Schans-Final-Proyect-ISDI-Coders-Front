@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import style from './selectLanguage.module.css';
+import style from '../select.language/select.language.module.css'
 
 export function SelectLanguage() {
   return (

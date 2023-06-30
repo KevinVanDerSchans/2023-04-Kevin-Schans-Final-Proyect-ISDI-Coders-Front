@@ -1,6 +1,6 @@
 import { LogInAndSignUpButton } from './log.in.and.sign.up.button/log.in.and.sign.up.button';
 import { MyCart } from './my.cart/my.cart';
-import { SelectLanguage } from './selectLanguage/selectLanguage';
+import { SelectLanguage } from './select.language/select.language';
 import { UserInterface } from './userInterface/userInterface';
 
 import { useNavigate } from "react-router-dom";

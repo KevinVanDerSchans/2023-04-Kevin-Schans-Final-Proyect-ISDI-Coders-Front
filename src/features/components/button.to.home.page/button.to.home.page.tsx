@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import style from "../buttonToHomePage/buttonToHomePage.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import style from "../button.to.home.page/button.to.home.page.module.css";
 
 export function ButtonToHomePage() {
   return (

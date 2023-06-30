@@ -11,5 +11,5 @@ describe('Given a Footer component', () => {
       const element = screen.getByRole('contentinfo');
       expect(element).toBeInTheDocument();
     });
-  })
+  });
 })

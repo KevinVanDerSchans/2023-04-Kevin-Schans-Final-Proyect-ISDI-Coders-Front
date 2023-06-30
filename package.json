@@ -8,7 +8,7 @@
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "jest --watchAll --coverage",
+    "test": "jest --coverage",
     "test:prod": "jest --watchAll --coverage --watchAll=false --passWithNoTests",
     "start": "json-server --watch db.json"
   },

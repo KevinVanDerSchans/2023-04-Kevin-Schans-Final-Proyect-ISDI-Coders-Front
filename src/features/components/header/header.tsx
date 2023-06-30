@@ -1,4 +1,4 @@
-import { NavControls } from '../navControls/navControls';
+import { NavControls } from '../navControls/nav.controls';
 import { Nav } from '../nav/nav';
 import { Link } from 'react-router-dom';
 import style from './header.module.css';

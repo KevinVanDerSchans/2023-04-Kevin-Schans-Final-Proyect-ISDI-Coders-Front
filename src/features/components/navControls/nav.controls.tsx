@@ -2,12 +2,12 @@ import { LogInAndSignUpButton } from './log.in.and.sign.up.button/log.in.and.sig
 import { MyCart } from './my.cart/my.cart';
 import { SelectLanguage } from './select.language/select.language';
 import { UserInterface } from './user.interface/user.interface';
+import style from "../navControls/nav.controls.module.css"
 
 import { useNavigate } from "react-router-dom";
 import { useUsers } from "../../hooks/use.users";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../core/store/store";
-import style from './navControls.module.css';
 
 export function NavControls() {
 
@@ -44,8 +44,6 @@ export function NavControls() {
         </>
       )
     }
-
-
       <MyCart></MyCart>
       <UserInterface></UserInterface>
       <SelectLanguage></SelectLanguage>

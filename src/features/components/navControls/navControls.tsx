@@ -1,4 +1,4 @@
-import { LogInAndSignUpButton } from './logInAndSignUpButton/logInAndSignUpButton';
+import { LogInAndSignUpButton } from './log.in.and.sign.up.button/log.in.and.sign.up.button';
 import { MyCart } from './myCart/myCart';
 import { SelectLanguage } from './selectLanguage/selectLanguage';
 import { UserInterface } from './userInterface/userInterface';

@@ -7,7 +7,7 @@ export function MyCart() {
   return (
     <Link to='/'>
       <div className={style.myCartContainer}>
-        <FontAwesomeIcon icon={faCartShopping} size="2x" style={{color: "#ddd5d5"}} aria-label="Online shopping cart for dance courses"/>
+        <FontAwesomeIcon className={style.myCartIcon} icon={faCartShopping} size="2x" style={{color: "#ddd5d5"}} aria-label="Online shopping cart for dance courses"/>
       </div>
     </Link>
   );

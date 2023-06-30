@@ -25,17 +25,21 @@
 input[type="text"],
 input[type="password"],
 input[type="email"] {
-  width: 12em;
-  font-size: 1.2rem;
-  outline: none;
-  padding: 12px 12px 12px 20px;
-  border-radius: 8px;
-  font-family: inherit;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background-color: transparent;
+  padding: 8px 12px;
+  font-size: 16px;
+  color: #f2eeee;
 }
 
 input:focus {
-  background-color: #efe7e7;
+  border-bottom-color: #fff;
   outline: none;
+}
+
+input::placeholder {
+  color: rgb(180, 174, 174);
 }
 
 .signUpButton {

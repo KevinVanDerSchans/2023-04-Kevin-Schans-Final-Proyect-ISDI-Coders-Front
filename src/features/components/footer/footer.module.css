@@ -7,16 +7,16 @@ footer {
   flex-direction: column;
   left: 0;
   bottom: 0;
-  color: rgb(0, 0, 0);
-  background-color: rgb(147, 147, 147);
+  color: rgb(192, 186, 186);
+  background-color: rgb(80, 79, 79);
   z-index: 2;
 }
 
 .dancersNames {
-  font-weight: 900;
+  font-weight: 400;
 }
 
 .companyName {
   font-style: normal;
-  font-weight: 900;
+  font-weight: 400;
 }

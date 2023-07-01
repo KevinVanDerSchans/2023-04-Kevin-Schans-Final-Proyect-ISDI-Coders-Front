@@ -19,7 +19,7 @@ export default function Contact() {
 
         <div className={style.errorContainer}>
           <div className={style.error404ImageContainer}>
-            <img className={style.error404Image} src="/assets/404Error.jpg" alt="404 Error" />
+            <img className={style.error404Image} src="/assets/404Error.jpg" alt="404 Error Image" />
           </div>
         </div>
 

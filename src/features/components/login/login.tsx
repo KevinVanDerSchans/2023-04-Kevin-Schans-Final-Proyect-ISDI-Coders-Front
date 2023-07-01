@@ -53,7 +53,7 @@ export default function Login() {
           <input className={style.formInput} type="password" id="password" name="password" placeholder="Password" required/>
         </div>
 
-        <div className={style.formInputContainer}>
+        <div className={style.logInButtonFormInputContainer}>
           <button className={style.logInButton} type="submit">Log in</button>
         </div>
 

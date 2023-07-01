@@ -22,7 +22,7 @@ export default function Register() {
 
     Swal.fire(
       'You have successfully registered!',
-    )
+    );
   };
 
   return (

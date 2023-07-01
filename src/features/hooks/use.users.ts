@@ -27,7 +27,6 @@ export function useUsers() {
   const handleLoginUser = async (user: Partial<User>) => {
     await dispatch(loginUserAsync({ repo, user }));
     const loggedUser = store.getState().users.currentUser;
-    console.log(loggedUser)
     localStorage.setItem('userToken', loggedUser.token as string);
   };
 

@@ -22,7 +22,8 @@ export default function Login() {
       user: inputs[0].value,
       password: inputs[1].value,
     } as Partial<User>;
-    handleLoginUser(loggedUser as Partial<User>)
+
+    handleLoginUser(loggedUser)
     element.reset();
 
     Swal.fire({

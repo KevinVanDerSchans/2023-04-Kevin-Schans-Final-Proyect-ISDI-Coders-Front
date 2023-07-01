@@ -1,4 +1,5 @@
-.signUpContainer {
+.registerContainer {
+  justify-content: center;
   display: flex;
   height: 100%;
   position: relative;
@@ -8,23 +9,25 @@
   background-color: rgb(43,31,31,0.7);
 }
 
-.signUpTitle {
+.registerTitle {
   font-size: 2.8rem;
+  justify-content: center;
   margin-bottom: 20px;
   color: white;
   text-align: center;
   font-family: inherit;
 }
 
-.formInputContainer {
+.registerFormContainer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding: 10px 0;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"] {
+.formInput[type="text"],
+.formInput[type="password"],
+.formInput[type="email"] {
   border: none;
   border-bottom: 2px solid #ccc;
   background-color: transparent;
@@ -33,18 +36,20 @@ input[type="email"] {
   color: #f2eeee;
 }
 
-input:focus {
+.formInput:focus {
   border-bottom-color: #fff;
   outline: none;
 }
 
-input::placeholder {
+.formInput::placeholder {
   color: rgb(180, 174, 174);
 }
 
-.signUpButton {
+.registerButton {
   width: 6em;
   align-content: center;
+  justify-content: center;
+  margin-left: 12px;
   font-size: 1.8rem;
   padding: 12px;
   font-weight: 700;
@@ -58,6 +63,6 @@ input::placeholder {
   font-family: inherit;
 }
 
-.signUpButton:hover {
+.registerButton:hover {
   background-color: rgb(20, 20, 20);
 }

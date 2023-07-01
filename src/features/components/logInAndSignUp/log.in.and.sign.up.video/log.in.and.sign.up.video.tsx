@@ -1,4 +1,4 @@
-import style from "../logInAndSignUpVideo/logInAndSignUpVideo.module.css"
+import style from "../log.in.and.sign.up.video/log.in.and.sign.up.video.module.css"
 
 export function LogInAndSignUpVideo() {
   return(

@@ -5,7 +5,7 @@ const Home = lazy(() => import('../home/home'));
 const MyCourses = lazy(() => import('../myCourses/myCourses'));
 const Contact = lazy(() => import('../contact/contact'));
 
-const LogInAndSignUp = lazy(() => import('../logInAndSignUp/logInAndSignUp'));
+const LogInAndSignUp = lazy(() => import('../logInAndSignUp/log.in.and.sign.up'));
 
 export function AppRoutes() {
   return (

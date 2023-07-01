@@ -1,6 +1,6 @@
+import { Header } from "../header/header";
 import { NavOptions } from "../../types/nav.options";
 import { Footer } from "../footer/footer";
-import { Header } from "../header/header";
 
 export default function MyCourses() {
 

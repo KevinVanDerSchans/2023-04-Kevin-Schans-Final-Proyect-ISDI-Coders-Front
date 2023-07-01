@@ -17,6 +17,8 @@ export default function Register() {
       password: (formElement.elements.namedItem("password") as HTMLInputElement).value,
     } as unknown as Partial<User>;
 
+
+
     handleRegisterUser(data);
     formElement.reset();
 
@@ -33,17 +35,17 @@ export default function Register() {
 
           <div className={style.registerFormContainer}>
             <label htmlFor="user"></label>
-            <input className={style.formInput} type="text" id="user" name="user" placeholder="Username" />
+            <input className={style.formInput} type="text" id="user" name="user" placeholder="Username" required/>
           </div>
 
           <div className={style.registerFormContainer}>
             <label htmlFor="email"></label>
-            <input className={style.formInput} type="email" id="email" name="email" placeholder="E-mail address"/>
+            <input className={style.formInput} type="email" id="email" name="email" placeholder="E-mail address" required />
           </div>
 
           <div className={style.registerFormContainer}>
             <label htmlFor="password"></label>
-            <input className={style.formInput} type="password" id="password" name="password" placeholder="Password"/>
+            <input className={style.formInput} type="password" id="password" name="password" placeholder="Password" required />
           </div>
 
           <div className={style.registerFormContainer}>

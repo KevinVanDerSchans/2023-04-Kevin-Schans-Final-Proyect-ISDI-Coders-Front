@@ -28,6 +28,7 @@
 .formInput[type="text"],
 .formInput[type="password"],
 .formInput[type="email"] {
+  width: 11em;
   border: none;
   border-bottom: 2px solid #ccc;
   background-color: transparent;

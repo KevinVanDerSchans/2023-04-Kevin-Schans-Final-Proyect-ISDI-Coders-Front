@@ -79,8 +79,10 @@ describe("Given the useUsers custom hook", () => {
     });
 
     test("Then the handleLogoutUser function should be called", async () => {
-      await userEvent.click(elements[3]);
-      store.dispatch(ac.logoutUser());
+      await act(async () => {
+        await userEvent.click(elements[3]);
+        store.dispatch(ac.logoutUser());
     });
   });
-});
+ })
+})

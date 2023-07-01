@@ -4,6 +4,7 @@ import { ApiRepository } from "./api.repository";
 type ApiResponse = {
   items: User[];
 };
+
 export class UserRepository extends ApiRepository<User> {
   constructor(public url: string) {
     super(url);

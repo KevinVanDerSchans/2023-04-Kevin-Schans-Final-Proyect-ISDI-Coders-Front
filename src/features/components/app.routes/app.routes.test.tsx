@@ -6,9 +6,9 @@ import { act } from "react-dom/test-utils";
 
 const MockComponent = jest.fn().mockReturnValue(<h1>Routes</h1>)
 jest.mock("../home/home", () => MockComponent)
-jest.mock("../myCourses/myCourses", () => MockComponent);
+jest.mock("../my.courses/myCourses", () => MockComponent);
 jest.mock("../contact/contact", () => MockComponent);
-jest.mock("../logInAndSignUp/logInAndSignUp", () => MockComponent);
+jest.mock("../logInAndSignUp/log.in.and.sign.up", () => MockComponent);
 
 describe('Given the AppRoutes component', () => {
   describe('When it is instantiated with the Home route', () => {

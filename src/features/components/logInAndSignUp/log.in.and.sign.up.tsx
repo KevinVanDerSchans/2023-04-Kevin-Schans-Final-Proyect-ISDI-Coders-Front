@@ -1,8 +1,8 @@
 import Login from "../login/login"
 import Register from "../register/register"
-import { LogInAndSignUpVideo } from "./logInAndSignUpVideo/logInAndSignUpVideo";
+import { LogInAndSignUpVideo } from "./log.in.and.sign.up.video/log.in.and.sign.up.video";
 import { ButtonToHomePage } from "../button.to.home.page/button.to.home.page";
-import style from "../logInAndSignUp/logInAndSignUp.module.css"
+import style from "../logInAndSignUp/log.in.and.sign.up.module.css"
 
 
 export default function LogInAndSignUp() {

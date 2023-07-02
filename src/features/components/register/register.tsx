@@ -20,12 +20,28 @@ export default function Register() {
     if (data.userName === "" || data.email === "" || data.password === "") {
       Swal.fire({
         icon: 'error',
+        iconColor: 'red',
         title: 'Oops...',
         text: 'Please, make sure you have filled in all the fields!',
+        color: 'black',
+        background: 'white',
+        imageAlt: 'Feedback alert for error register.',
       });
+
     } else {
       handleRegisterUser(data);
       formElement.reset();
+
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: `Welcome ${data.userName} !`,
+        text: 'Account successfully created.',
+        showConfirmButton: true,
+        color: 'black',
+        background: 'white',
+        imageAlt: 'Feedback alert for successfully register.',
+      });
     }
   };
 

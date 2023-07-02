@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: space-around;
   text-align: center;
-  top: 1.9em;
+  top: 2em;
   font-size: 1.55rem;
   color:rgb(117, 117, 102);
   background-color: rgb(71, 68, 67);
@@ -24,6 +24,7 @@
 }
 
 .navLinkItem {
+  font-size: 1.4rem;
   color: rgb(234, 229, 229);
 }
 

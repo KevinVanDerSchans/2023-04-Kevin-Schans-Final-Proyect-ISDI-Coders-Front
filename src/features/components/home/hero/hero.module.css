@@ -29,13 +29,13 @@
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   color: rgb(243, 242, 242);
 }
 
 .heroLink {
   padding: 12px 20px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
   transition: linear .3s;
   cursor: default;

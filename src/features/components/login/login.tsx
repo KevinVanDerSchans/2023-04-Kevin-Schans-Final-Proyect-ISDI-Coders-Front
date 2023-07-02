@@ -21,20 +21,32 @@ export default function Login() {
       userName: inputs[0].value,
       password: inputs[1].value,
     } as Partial<User>;
-    console.log(loggedUser)
 
-    handleLoginUser(loggedUser)
-    console.log(handleLoginUser(loggedUser))
-    element.reset();
-    navigate('/');
+    if (loggedUser.userName === "" || loggedUser.password === "") {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Please, make sure you have filled in all the fields!',
+        showConfirmButton: true,
+        color: 'black',
+        background: 'white',
+      });
 
-    Swal.fire({
-      position: 'center',
-      icon: 'success',
-      title: 'Welcome!',
-      showConfirmButton: false,
-      timer: 2000
-    });
+    } else {
+      handleLoginUser(loggedUser);
+      element.reset();
+      navigate('/');
+
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: `Welcome ${loggedUser.userName} !`,
+        showConfirmButton: false,
+        color: 'black',
+        background: 'white',
+        timer: 2000,
+      });
+    }
   };
 
   return (

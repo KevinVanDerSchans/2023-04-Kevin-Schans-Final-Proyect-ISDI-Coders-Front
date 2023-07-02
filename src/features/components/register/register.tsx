@@ -17,12 +17,32 @@ export default function Register() {
       password: (formElement.elements.namedItem("password") as HTMLInputElement).value,
     } as unknown as Partial<User>;
 
-    handleRegisterUser(data);
-    formElement.reset();
+    if (data.userName === "" || data.email === "" || data.password === "") {
+      Swal.fire({
+        icon: 'error',
+        iconColor: 'red',
+        title: 'Oops...',
+        text: 'Please, make sure you have filled in all the fields!',
+        color: 'black',
+        background: 'white',
+        imageAlt: 'Feedback alert for error register.',
+      });
 
-    Swal.fire(
-      'You have successfully registered!',
-    );
+    } else {
+      handleRegisterUser(data);
+      formElement.reset();
+
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: `Welcome ${data.userName} !`,
+        text: 'Account successfully created.',
+        showConfirmButton: true,
+        color: 'black',
+        background: 'white',
+        imageAlt: 'Feedback alert for successfully register.',
+      });
+    }
   };
 
   return (
@@ -33,17 +53,17 @@ export default function Register() {
 
           <div className={style.registerFormContainer}>
             <label htmlFor="user"></label>
-            <input className={style.formInput} type="text" id="user" name="user" placeholder="Username" required/>
+            <input className={style.formInput} type="text" id="user" name="user" placeholder="Username" />
           </div>
 
           <div className={style.registerFormContainer}>
             <label htmlFor="email"></label>
-            <input className={style.formInput} type="email" id="email" name="email" placeholder="E-mail address" required />
+            <input className={style.formInput} type="email" id="email" name="email" placeholder="E-mail address" />
           </div>
 
           <div className={style.registerFormContainer}>
             <label htmlFor="password"></label>
-            <input className={style.formInput} type="password" id="password" name="password" placeholder="Password" required />
+            <input className={style.formInput} type="password" id="password" name="password" placeholder="Password" />
           </div>
 
           <div className={style.registerButtonFormInputContainer}>

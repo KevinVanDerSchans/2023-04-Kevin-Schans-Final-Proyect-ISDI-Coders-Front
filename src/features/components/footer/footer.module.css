@@ -13,10 +13,12 @@ footer {
 }
 
 .dancersNames {
+  font-family: "Recia";
   font-weight: 400;
 }
 
 .companyName {
-  font-style: normal;
+  font-family: "Recia";
   font-weight: 400;
+  font-style: normal;
 }

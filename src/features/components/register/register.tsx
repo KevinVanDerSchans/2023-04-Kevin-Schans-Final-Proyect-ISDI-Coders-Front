@@ -17,8 +17,6 @@ export default function Register() {
       password: (formElement.elements.namedItem("password") as HTMLInputElement).value,
     } as unknown as Partial<User>;
 
-
-
     handleRegisterUser(data);
     formElement.reset();
 
@@ -48,7 +46,7 @@ export default function Register() {
             <input className={style.formInput} type="password" id="password" name="password" placeholder="Password" required />
           </div>
 
-          <div className={style.registerFormContainer}>
+          <div className={style.registerButtonFormInputContainer}>
             <button className={style.registerButton} type="submit">Register</button>
           </div>
 

@@ -45,7 +45,7 @@ describe("UserRepository", () => {
         password: "12345",
       };
 
-      const expectedUrl = "https://kevin-schans-alexandmelanie.com/user/login/";
+      const expectedUrl = "https://kevin-schans-alexandmelanie.com/user/login";
       const mockResponse = {
         id: "1",
         userName: "Erik",

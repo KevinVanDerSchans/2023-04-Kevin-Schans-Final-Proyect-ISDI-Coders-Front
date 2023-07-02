@@ -3,7 +3,7 @@
   height: 100%;
   position: relative;
   flex-direction: column;
-  padding: 28px 30px;
+  padding: 28px 40px;
   border-radius: 4%;
   background-color: rgb(43,31,31,0.7);
 }
@@ -22,14 +22,20 @@
   padding: 10px 0;
 }
 
+.logInButtonFormInputContainer {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
 .formInput[type="text"],
 .formInput[type="password"],
 .formInput[type="email"] {
-  width: 11em;
+  width: 9.4em;
+  margin-left: 10px;
   border: none;
   border-bottom: 2px solid #ccc;
   background-color: transparent;
-  padding: 8px 12px;
+  padding: 8px 0px;
   font-size: 16px;
   color: #f2eeee;
 }
@@ -44,7 +50,7 @@
 }
 
 .logInButton {
-  width: 6em;
+  width: 5.4em;
   align-content: center;
   font-size: 1.8rem;
   padding: 12px;

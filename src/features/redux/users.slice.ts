@@ -14,14 +14,6 @@ const initialState: UsersState = {
   token: localStorage.getItem('userToken') as string | undefined
 };
 
-export const loadUsersAsync = createAsyncThunk(
-  "users/load",
-  async (repo: UserRepository) => {
-    const response = await repo.query();
-    return response;
-  }
-);
-
 export const registerUserAsync = createAsyncThunk<
   User,
   { repo: UserRepository; user: Partial<User> }
@@ -50,10 +42,6 @@ const usersSlice = createSlice({
     }),
   },
   extraReducers: (builder) => {
-    builder.addCase(loadUsersAsync.fulfilled, (state, { payload }) => ({
-      ...state,
-      users: payload,
-    }));
     builder.addCase(registerUserAsync.fulfilled, (state, { payload }) => ({
       ...state,
       users: [...state.users, payload],

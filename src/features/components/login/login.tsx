@@ -18,13 +18,15 @@ export default function Login() {
     const inputs = element.querySelectorAll("input");
 
     const loggedUser = {
-
-      user: inputs[0].value,
+      userName: inputs[0].value,
       password: inputs[1].value,
     } as Partial<User>;
+    console.log(loggedUser)
 
     handleLoginUser(loggedUser)
+    console.log(handleLoginUser(loggedUser))
     element.reset();
+    navigate('/');
 
     Swal.fire({
       position: 'center',
@@ -33,8 +35,6 @@ export default function Login() {
       showConfirmButton: false,
       timer: 2000
     });
-
-    navigate('/');
   };
 
   return (
@@ -45,16 +45,16 @@ export default function Login() {
 
         <div className={style.formInputContainer}>
           <label htmlFor="user"></label>
-          <input className={style.formInput} type="text" id="user" name="userName" placeholder="Username" required />
+          <input className={style.formInput} type="text" id="user" name="userName" placeholder="Username" />
         </div>
 
         <div className={style.formInputContainer}>
           <label htmlFor="password"></label>
-          <input className={style.formInput} type="password" id="password" name="password" placeholder="Password" required/>
+          <input className={style.formInput} type="password" id="password" name="password" placeholder="Password" />
         </div>
 
         <div className={style.logInButtonFormInputContainer}>
-          <button className={style.logInButton} type="submit">Log in</button>
+          <button className={style.logInButton} type="submit" role="button" aria-selected="true">Log in</button>
         </div>
 
       </form>

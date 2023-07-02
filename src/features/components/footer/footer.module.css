@@ -12,11 +12,7 @@ footer {
   z-index: 2;
 }
 
-.dancersNames {
-  font-weight: 400;
-}
-
-.companyName {
-  font-style: normal;
+.dancersNames,
+.companyName{
   font-weight: 400;
 }

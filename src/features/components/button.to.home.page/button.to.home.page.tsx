@@ -7,7 +7,7 @@ export function ButtonToHomePage() {
   return (
     <div className={style.linkToHomePageContainer}>
       <Link to="/">
-        <span className={style.linkToHomePageButton}><FontAwesomeIcon className={style.arrowLeftIcon} aria-label="Arrow icon to navigate to Home page" icon={faArrowLeft} size="2xs" style={{color: "#fafafa",}} /> GO HOME</span>
+        <span className={style.linkToHomePageButton}><FontAwesomeIcon className={style.arrowLeftIcon} aria-label="Arrow icon to navigate to Home page" icon={faArrowLeft} style={{color: "#fafafa",}} /> GO HOME</span>
       </Link>
     </div>
   );

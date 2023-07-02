@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { useUsers } from "../../hooks/use.users";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../core/store/store";
+import Swal from 'sweetalert2';
 
 export function NavControls() {
 
@@ -27,6 +28,26 @@ export function NavControls() {
 
   const runLogout = () => {
     handleLogoutUser();
+
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 2300,
+      timerProgressBar: true,
+      color: 'black',
+      background: 'white',
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+
+    Toast.fire({
+      icon: 'success',
+      title: "You've successfully logged out!",
+      text: 'Hope to see you soon!'
+    })
   }
 
   return (

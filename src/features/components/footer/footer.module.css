@@ -12,13 +12,7 @@ footer {
   z-index: 2;
 }
 
-.dancersNames {
-  font-family: "Recia";
+.dancersNames,
+.companyName{
   font-weight: 400;
-}
-
-.companyName {
-  font-family: "Recia";
-  font-weight: 400;
-  font-style: normal;
 }

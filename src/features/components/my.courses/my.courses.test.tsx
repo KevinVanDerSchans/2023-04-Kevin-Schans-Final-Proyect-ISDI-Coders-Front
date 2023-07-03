@@ -3,16 +3,16 @@ import "@testing-library/jest-dom";
 import { MemoryRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "../../../core/store/store";
-import Home from "../home/home";
+import MyCourses from "./my.courses";
 
-describe('Given the Home component', () => {
+describe('Given the MyCourses component', () => {
   describe('When it is instantiated', () => {
 
     beforeEach(() => {
       render(
         <Provider store={store}>
           <Router>
-          <Home></Home>
+          <MyCourses></MyCourses>
           </Router>
         </Provider>
       );

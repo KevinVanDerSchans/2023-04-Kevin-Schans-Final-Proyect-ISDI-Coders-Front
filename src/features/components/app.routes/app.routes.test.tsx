@@ -6,7 +6,7 @@ import { act } from "react-dom/test-utils";
 
 const MockComponent = jest.fn().mockReturnValue(<h1>Routes</h1>)
 jest.mock("../home/home", () => MockComponent)
-jest.mock("../my.courses/myCourses", () => MockComponent);
+jest.mock("../my.courses/my.courses", () => MockComponent);
 jest.mock("../contact/contact", () => MockComponent);
 jest.mock("../logInAndSignUp/log.in.and.sign.up", () => MockComponent);
 

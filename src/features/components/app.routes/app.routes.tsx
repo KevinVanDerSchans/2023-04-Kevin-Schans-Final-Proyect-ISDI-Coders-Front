@@ -2,7 +2,7 @@ import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 const Home = lazy(() => import('../home/home'));
-const MyCourses = lazy(() => import('../my.courses/myCourses'));
+const MyCourses = lazy(() => import('../my.courses/my.courses'));
 const Contact = lazy(() => import('../contact/contact'));
 
 const LogInAndSignUp = lazy(() => import('../logInAndSignUp/log.in.and.sign.up'));

@@ -1,9 +1,11 @@
 import { Action, ThunkAction, configureStore } from "@reduxjs/toolkit";
 import usersSlice from "../../features/redux/users.slice";
+import danceCourseSlice from "../../features/redux/danceCourse.slice";
 
 export const store = configureStore({
   reducer: {
     users: usersSlice,
+    danceCourses: danceCourseSlice,
   },
 });
 

@@ -55,7 +55,7 @@ export function NavControls() {
 
       {token ? (
         <>
-          <span className={style.userGreeting}>Hello, {currentUser?.userName}</span>
+          <span className={style.userGreeting}>Hello, {currentUser.userName}</span>
           <button onClick={handleUser} className={style.logOutButton}>Log out</button>
         </>
       ) : (

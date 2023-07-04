@@ -5,13 +5,15 @@ import { UserRepository } from "../../core/services/user.repository";
 export type UsersState = {
   users: User[];
   currentUser: Partial<User>;
-  token?: string
+  token?: string,
+  role: string | undefined,
 };
 
 const initialState: UsersState = {
   users: [] as User[],
   currentUser: {} as Partial<User>,
-  token: localStorage.getItem('userToken') as string | undefined
+  token: localStorage.getItem('userToken') as string | undefined,
+  role: undefined
 };
 
 export const registerUserAsync = createAsyncThunk<
@@ -49,9 +51,20 @@ const usersSlice = createSlice({
     builder.addCase(loginUserAsync.fulfilled, (state, { payload }) => ({
       ...state,
       currentUser: payload,
+      role: payload.role,
     }));
   },
 });
 
 export default usersSlice.reducer;
 export const ac = usersSlice.actions;
+
+/*
+
+userData: {
+        id: payload.user.id,
+        user: payload.user.userName,
+        role: payload.user.role,
+      },
+
+*/

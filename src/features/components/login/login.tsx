@@ -20,6 +20,7 @@ export default function Login() {
     const loggedUser = {
       userName: inputs[0].value,
       password: inputs[1].value,
+
     } as Partial<User>;
 
     if (loggedUser.userName === "" || loggedUser.password === "") {

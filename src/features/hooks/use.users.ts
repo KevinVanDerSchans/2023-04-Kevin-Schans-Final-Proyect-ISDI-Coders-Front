@@ -25,7 +25,7 @@ export function useUsers() {
 
   const handleGetToken = (token: string) => {
     dispatch(ac.getToken(token));
-  }
+  };
 
   const handleLogoutUser = () => {
     dispatch(ac.logoutUser());

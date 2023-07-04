@@ -1,5 +1,6 @@
 import { Header } from "../header/header";
 import { NavOptions } from "../../types/nav.options";
+import { List } from "./list/list";
 import { Footer } from "../footer/footer";
 
 export default function MyCourses() {
@@ -13,6 +14,7 @@ export default function MyCourses() {
   return (
     <>
       <Header options={options}></Header>
+      <List></List>
       <Footer></Footer>
     </>
   );

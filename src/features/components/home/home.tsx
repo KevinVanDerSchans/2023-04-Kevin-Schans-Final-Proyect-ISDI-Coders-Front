@@ -11,6 +11,7 @@ export default function Home() {
     { url: '/myCourses', label: 'MY COURSES' },
     { url: '/contact', label: 'CONTACT' }
   ];
+
   /* TEMP
   const admin = store.getState().users.role;
   console.log(admin);

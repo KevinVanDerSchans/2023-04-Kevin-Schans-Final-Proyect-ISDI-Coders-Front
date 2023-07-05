@@ -1,3 +1,19 @@
-body {
-  background-color: rgb(234, 222, 222);
+.danceCoursesContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  color: rgb(240, 239, 239);
+  background-color: rgb(34, 33, 33);
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  position: relative;
+  width: 70%;
+  margin: 100px auto 30px;
+  justify-content: center;
+  padding-top: 25px;
+  z-index: 0;
 }

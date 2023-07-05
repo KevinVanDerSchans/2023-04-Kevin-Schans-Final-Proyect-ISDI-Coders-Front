@@ -1,4 +1,5 @@
 import { useDanceCourses } from "../../../hooks/use.danceCourses";
+import { DanceCourseCard } from "./danceCourse.card/danceCourse.card";
 import style from "./list.module.css"
 import { useEffect } from "react";
 
@@ -11,15 +12,16 @@ export function List() {
   }, [loadDanceCourses]);
 
   return (
-    <section className={style.body}>
-      <ul>
-        {danceCourses.map((item) => (
-          <li>
-            <span>${item.courseName}</span>
-            <span>${item.largeDescription}</span>
-          </li>
-        ))}
-      </ul>
+    <section className={style.danceCoursesContainer}>
+      <div className={style.products}>
+
+        <ul >
+          {danceCourses.map((card) => (
+            <DanceCourseCard key={card.id} item={card}></DanceCourseCard>
+          ))}
+        </ul>
+
+      </div>
     </section>
   )
 }

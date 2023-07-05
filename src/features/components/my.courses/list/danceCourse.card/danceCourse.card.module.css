@@ -1,0 +1,120 @@
+.product {
+  position: relative;
+  width: 24em;
+  height: 580px;
+  padding: 20px 25px;
+  border-radius: 20px;
+  box-shadow: 10px 9px 5px -1px rgba(27, 26, 26, 0.68);
+  color: rgb(230, 225, 225);
+  background-color:#312f2f;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.product:hover {
+  transform: translateY(-18px);
+  box-shadow: 3px 9px 20px rgb(0, 0, 0);
+}
+
+.product a {
+  text-decoration: none;
+}
+
+.danceCourseImageContainer {
+  display: grid;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.danceCourseImage {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.danceCourseDescriptionContainer {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding-top: 12px;
+}
+
+.danceCourseNameAndPriceContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+.danceCourseName {
+  display: flex;
+  position: relative;
+  margin-left: 0;
+  font-size: 1.8rem;
+  color: rgb(236, 234, 234);
+  font-weight: 800;
+  margin: 0;
+}
+
+.danceCoursePrice {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(229, 232, 97);
+}
+
+.danceCourseInitialDescriptionContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.danceCourseLevel {
+  display: flex;
+  font-size: 1.2rem;
+  padding: 10px;
+  border: 2px solid rgb(193, 189, 189)
+}
+
+.danceCourseInitialDescription {
+  font-size: 1rem;
+  color: rgb(171, 171, 175);
+  text-decoration: none;
+  text-align: left;
+}
+
+.danceCourseLevelAndButtonContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  padding-top: 12px;
+}
+
+.buyNowButton {
+  display: flex;
+  right: 0;
+  width: 6.4em;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 14px 12px;
+  font-weight: 700;
+  transition: linear .3s;
+  border-radius: 8px;
+  border: 3px solid rgb(0, 0, 0);
+
+  color: rgb(227, 223, 223);
+  background-color: #922424;
+  font-family: inherit;
+  cursor: default;
+}
+
+.buyNowButton:hover {
+  background-color: rgb(20, 20, 20);
+}

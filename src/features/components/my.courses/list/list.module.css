@@ -1,19 +1,20 @@
 .danceCoursesContainer {
   display: flex;
-  width: 100%;
-  flex-direction: column;
-  color: rgb(240, 239, 239);
-  background-color: rgb(34, 33, 33);
+  justify-content: center;
 }
 
-.products {
+.danceCourseList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 50px;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 72px;
+  grid-row-gap: 52px;
   position: relative;
-  width: 70%;
+  width: 100%;
   margin: 100px auto 30px;
-  justify-content: center;
   padding-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
   z-index: 0;
+  grid-auto-flow: row dense;
 }

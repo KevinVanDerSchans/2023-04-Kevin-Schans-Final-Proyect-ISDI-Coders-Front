@@ -15,7 +15,7 @@ export function List() {
     <section className={style.danceCoursesContainer}>
       <div className={style.products}>
 
-        <ul >
+        <ul className={style.danceCourseList}>
           {danceCourses.map((card) => (
             <DanceCourseCard key={card.id} item={card}></DanceCourseCard>
           ))}

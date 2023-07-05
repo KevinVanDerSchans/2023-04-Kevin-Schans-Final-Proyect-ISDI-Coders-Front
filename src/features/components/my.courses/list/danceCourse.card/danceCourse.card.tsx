@@ -11,11 +11,12 @@ export function DanceCourseCard({ item }: Propstype) {
     <Link to="/">
 
       <li key={item.id} className={style.product}>
-        <div className={style.danceCourseImage}>
-            <img src="/" alt="" style={{width: "16em"}} />
+        <div className={style.danceCourseImageContainer}>
+            <img src={item.image.url} alt="" style={{width: "16em"}} className={style.danceCourseImage}/>
         </div>
-      {/* TEMP: Check image first.
+
         <div className={style.danceCourseDescriptionContainer}>
+
 
           <div className={style.danceCourseNameAndPriceContainer}>
             <span className={style.danceCourseName}>{item.courseName.toUpperCase()}</span>
@@ -27,21 +28,17 @@ export function DanceCourseCard({ item }: Propstype) {
           </div>
 
           <div className={style.danceCourseLevelAndButtonContainer}>
-            <div>
+            <div className={style.danceCourseLevelContainer}>
               <span className={style.danceCourseLevel}>{item.level}</span>
             </div>
 
             <div>
               <button className={style.buyNowButton}>BUY NOW</button>
             </div>
-
-
           </div>
 
         </div>
-*/}
       </li>
-
     </Link>
   );
 }

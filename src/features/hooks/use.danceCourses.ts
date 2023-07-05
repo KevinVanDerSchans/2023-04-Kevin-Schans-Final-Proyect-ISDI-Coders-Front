@@ -10,7 +10,7 @@ export function useDanceCourses() {
 
   const dispatch: AppDispatch = useDispatch();
 
-  const url = "http://localhost:4545/danceCourse";
+  const url = "http://localhost:4545/danceCourse/";
 
   const repo: DanceCourseRepository = useMemo(() => new DanceCourseRepository(url), []);
 

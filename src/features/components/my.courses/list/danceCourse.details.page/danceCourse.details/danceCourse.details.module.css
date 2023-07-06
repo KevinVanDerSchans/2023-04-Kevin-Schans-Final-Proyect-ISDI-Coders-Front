@@ -1,0 +1,18 @@
+.danceCourseDetailsSection {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+
+.danceCourseDetailsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  width: 90%;
+  position: relative;
+  top: 95px;
+  color: rgb(241, 238, 238);
+  background-color: rgb(34, 33, 33);
+  box-shadow: 1px 9px 20px ;
+  border-radius: 20px;
+}

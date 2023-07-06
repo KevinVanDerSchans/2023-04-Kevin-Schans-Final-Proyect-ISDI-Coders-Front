@@ -16,8 +16,8 @@ export function List() {
       <div className={style.products}>
 
         <ul className={style.danceCourseList}>
-          {danceCourses.map((card) => (
-            <DanceCourseCard key={card.id} item={card}></DanceCourseCard>
+          {danceCourses.map((item) => (
+            <DanceCourseCard key={item.id} item={item}></DanceCourseCard>
           ))}
         </ul>
 

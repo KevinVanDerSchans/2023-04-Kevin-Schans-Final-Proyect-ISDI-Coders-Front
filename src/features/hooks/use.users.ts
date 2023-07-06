@@ -1,12 +1,12 @@
 import { useSelector, useDispatch } from "react-redux";
-import { AppDispatch, RootState, store } from "../../core/store/store";
+import { AppDispatch, RootState } from "../../core/store/store";
 import { useMemo } from "react";
 import { ac, loginUserAsync, registerUserAsync } from "../redux/users.slice";
 import { User } from "../models/user";
 import { UserRepository } from "../../core/services/user.repository";
 
 export function useUsers() {
-  const { users, currentUser, token } = useSelector((state: RootState) => state.users);
+  const { users, currentUser, token, loginError } = useSelector((state: RootState) => state.users);
   const dispatch: AppDispatch = useDispatch();
 
   const url = "http://localhost:4545/";
@@ -19,13 +19,8 @@ export function useUsers() {
 
   const handleLoginUser = async (user: Partial<User>) => {
     await dispatch(loginUserAsync({ repo, user }));
-    const loggedUser = store.getState().users.currentUser;
-    localStorage.setItem("userToken", loggedUser.token as string);
   };
 
-  const handleGetToken = (token: string) => {
-    dispatch(ac.getToken(token));
-  };
 
   const handleLogoutUser = () => {
     dispatch(ac.logoutUser());
@@ -38,7 +33,7 @@ export function useUsers() {
     handleLoginUser,
     currentUser,
     token: token,
-    handleGetToken,
-    handleLogoutUser
+    handleLogoutUser,
+    loginError
   };
 }

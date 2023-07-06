@@ -15,14 +15,14 @@ export function NavControls() {
   const { handleLogoutUser } = useUsers();
   const navigate = useNavigate();
 
-  const { token, currentUser } = useSelector((state: RootState) => state.users);
+  const { token } = useSelector((state: RootState) => state.users);
 
-  const handleUser = () => {
+  const handleUser = async () => {
     if (token) {
       runLogout();
 
     } else {
-      navigate('/logInAndSignUp')
+      navigate('/logInAndSignUp');
     }
   };
 
@@ -53,18 +53,18 @@ export function NavControls() {
   return (
     <div className={style.navControls}>
 
-      {token ? (
+
+      { token ? (
         <>
-          <span className={style.userGreeting}>Hello, {currentUser.userName}</span>
           <button onClick={handleUser} className={style.logOutButton}>Log out</button>
         </>
       ) : (
         <>
           <span onClick={handleUser}><LogInAndSignUpButton></LogInAndSignUpButton></span>
-
         </>
       )
-    }
+      }
+
       <MyCart></MyCart>
       <UserInterface></UserInterface>
       <SelectLanguage></SelectLanguage>

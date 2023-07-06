@@ -19,13 +19,11 @@ const mockRepo = {
   login: jest.fn(),
 } as unknown as UserRepository;
 
-const mockToken = "tokentest";
 
 function TestComponent() {
   const {
     handleRegisterUser,
     handleLoginUser,
-    handleGetToken,
     handleLogoutUser,
   } = useUsers();
 
@@ -33,7 +31,6 @@ function TestComponent() {
     <>
       <button onClick={() => handleRegisterUser(mockUser)}></button>
       <button onClick={() => handleLoginUser(mockUser)}></button>
-      <button onClick={() => handleGetToken(mockToken)}></button>
       <button onClick={() => handleLogoutUser()}></button>
     </>
   );
@@ -75,7 +72,7 @@ describe("Given the useUsers custom hook", () => {
 
     test("Then the handleGetToken function should be called", async () => {
       await userEvent.click(elements[2]);
-      store.dispatch(ac.getToken(mockToken));
+
     });
 
     test("Then the handleLogoutUser function should be called", async () => {

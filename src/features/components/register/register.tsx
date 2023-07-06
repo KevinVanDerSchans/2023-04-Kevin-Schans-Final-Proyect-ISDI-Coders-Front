@@ -23,8 +23,9 @@ export default function Register() {
         iconColor: 'red',
         title: 'Oops...',
         text: 'Please, make sure you have filled in all the fields!',
-        color: 'black',
-        background: 'white',
+        color: 'white',
+        background:
+          "linear-gradient(to left, rgb(146, 36, 36), rgba(0, 0, 0))",
         imageAlt: 'Feedback alert for error register.',
       });
 
@@ -38,8 +39,9 @@ export default function Register() {
         title: `Welcome ${data.userName} !`,
         text: 'Account successfully created.',
         showConfirmButton: true,
-        color: 'black',
-        background: 'white',
+        color: 'white',
+        background:
+          "linear-gradient(to bottom, rgb(146, 36, 36), rgba(0, 0, 0))",
         imageAlt: 'Feedback alert for successfully register.',
       });
     }

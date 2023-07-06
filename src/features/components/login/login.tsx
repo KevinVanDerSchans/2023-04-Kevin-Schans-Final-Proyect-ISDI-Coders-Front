@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useUsers } from "../../hooks/use.users";
-import { SyntheticEvent } from "react";
+import { SyntheticEvent, useEffect } from "react";
 import { User } from "../../models/user";
 import 'animate.css';
 import Swal from "sweetalert2";
@@ -8,11 +8,13 @@ import style from "../login/login.module.css"
 
 export default function Login() {
 
-  const { handleLoginUser } = useUsers();
+  const { handleLoginUser, loginError } = useUsers();
   const navigate = useNavigate();
 
   const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault();
+
+    const loginFormElement = event.target as HTMLFormElement;
 
     const element = event.target as HTMLFormElement;
     const inputs = element.querySelectorAll("input");
@@ -23,32 +25,56 @@ export default function Login() {
 
     } as Partial<User>;
 
+    handleLoginUser(loggedUser);
+    loginFormElement.reset();
+
     if (loggedUser.userName === "" || loggedUser.password === "") {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
         text: 'Please, make sure you have filled in all the fields!',
         showConfirmButton: true,
-        color: 'black',
-        background: 'white',
-      });
-
-    } else {
-      handleLoginUser(loggedUser);
-      element.reset();
-      navigate('/');
-
-      Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: `Welcome ${loggedUser.userName} !`,
-        showConfirmButton: false,
-        color: 'black',
-        background: 'white',
-        timer: 2000,
+        color: 'white',
+        background:
+          "linear-gradient(to left, rgba(20, 20, 20), rgba(0, 0, 0))",
       });
     }
   };
+
+  useEffect(() => {
+
+    if (loginError === null) {
+      return;
+    }
+
+    if (loginError) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Invalid Username or password!',
+        color: 'white',
+        background:
+          "linear-gradient(to left, rgb(68, 66, 66), rgba(0, 0, 0))",
+      })
+    }
+
+    if (loginError === false) {
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        iconColor: 'red',
+        title: `Welcome to Alex & Melanie !`,
+        showConfirmButton: false,
+        color: 'white',
+        background:
+          "linear-gradient(to left, rgb(146, 36, 36), rgba(0, 0, 0))",
+        timer: 2000,
+      });
+      setTimeout(() => {
+        navigate("/");
+      }, 2000);
+    }
+  }, [loginError, navigate]);
 
   return (
     <div className={style.logInContainer}>

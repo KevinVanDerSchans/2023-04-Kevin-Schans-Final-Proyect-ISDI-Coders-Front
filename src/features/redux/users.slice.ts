@@ -51,20 +51,10 @@ const usersSlice = createSlice({
     builder.addCase(loginUserAsync.fulfilled, (state, { payload }) => ({
       ...state,
       currentUser: payload,
-      role: payload.role,
+      // role: payload.role,
     }));
   },
 });
 
 export default usersSlice.reducer;
 export const ac = usersSlice.actions;
-
-/*
-
-userData: {
-        id: payload.user.id,
-        user: payload.user.userName,
-        role: payload.user.role,
-      },
-
-*/

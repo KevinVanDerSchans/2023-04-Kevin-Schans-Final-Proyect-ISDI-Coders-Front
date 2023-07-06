@@ -1,97 +1,72 @@
+import { MemoryRouter as Router } from "react-router-dom";
+import { render, screen, act } from "@testing-library/react";
 import { AppRoutes } from "./app.routes";
-import { MemoryRouter as Router} from "react-router-dom";
 import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
-import { act } from "react-dom/test-utils";
 
-const MockComponent = jest.fn().mockReturnValue(<h1>Routes</h1>)
-jest.mock("../home/home", () => MockComponent)
-jest.mock("../my.courses/my.courses", () => MockComponent);
-jest.mock("../contact/contact", () => MockComponent);
-jest.mock("../logInAndSignUp/log.in.and.sign.up", () => MockComponent);
-
-describe('Given the AppRoutes component', () => {
-  describe('When it is instantiated with the Home route', () => {
+describe("Given the AppRoutes component", () => {
+  describe("When it is instantiate with a route /", () => {
+    const MockedComponentHome = jest.fn().mockReturnValue(<h1>Home</h1>);
+    jest.mock("../home/Home", () => MockedComponentHome);
 
     let element: HTMLElement;
 
     beforeEach(async () => {
-      await act(async () => {
+      await act(async () =>
         render(
           <Router initialEntries={["/"]} initialIndex={0}>
-              <AppRoutes></AppRoutes>
+            <AppRoutes></AppRoutes>
           </Router>
-        );
-      });
+        )
+      );
 
-      element = screen.getByText("Routes");
+      element = screen.getByText("Home");
     });
-
-    test('Then it should be in the document', () => {
-      expect(MockComponent).toHaveBeenCalled();
+    test("Then it should render Home", () => {
+      expect(MockedComponentHome).toHaveBeenCalled();
       expect(element).toBeInTheDocument();
     });
   });
 
-  describe("When it is instantiated with the MyCourses route", () => {
+  describe("When it is instantiate with a route /myCourses", () => {
+    const MockedComponentList = jest.fn().mockReturnValue(<h1>MY COURSES</h1>);
+    jest.mock("../my.courses/my.courses", () => MockedComponentList);
     let element: HTMLElement;
 
     beforeEach(async () => {
-      await act(async () => {
+      await act(async () =>
         render(
-          <Router initialEntries={["/myCourses"]} initialIndex={1}>
+          <Router initialEntries={["/myCourses"]} initialIndex={0}>
             <AppRoutes></AppRoutes>
           </Router>
-        );
-      });
-
-    element = screen.getByText("Routes");
-  });
-
-  test("Then it should be in the document", () => {
-    expect(MockComponent).toHaveBeenCalled();
-    expect(element).toBeInTheDocument();
-  });
- });
-
- describe("When it is instantiated with the Contact route", () => {
-  let element: HTMLElement;
-
-  beforeEach(async () => {
-    await act(async () => {
-      render(
-        <Router initialEntries={["/contact"]} initialIndex={2}>
-          <AppRoutes></AppRoutes>
-        </Router>
+        )
       );
+
+      element = screen.getByText("MY COURSES");
     });
-
-  element = screen.getByText("Routes");
-  });
-
-  test("Then it should be in the document", () => {
-    expect(MockComponent).toHaveBeenCalled();
-    expect(element).toBeInTheDocument();
+    test("Then it should render List", () => {
+      expect(MockedComponentList).toHaveBeenCalled();
+      expect(element).toBeInTheDocument();
     });
   });
 
-  describe("When it is instantiated with the LogInAndSignUp route", () => {
+  describe("When it is instantiate with a route *", () => {
+    const MockedComponentError = jest.fn().mockReturnValue(<h1>Contact</h1>);
+    jest.mock("../contact/contact", () => MockedComponentError);
     let element: HTMLElement;
 
     beforeEach(async () => {
-      await act(async () => {
+      await act(async () =>
         render(
-          <Router initialEntries={["/logInAndSignUp"]} initialIndex={3}>
+          <Router initialEntries={["/*"]} initialIndex={0}>
             <AppRoutes></AppRoutes>
           </Router>
-        );
-      });
+        )
+      );
 
-    element = screen.getByText("Routes");
+      element = screen.getByText("Contact");
     });
-
-    test("Then it should be in the document", () => {
-      expect(MockComponent).toHaveBeenCalled();
+    test("Then it should render ErrorPage", () => {
+      expect(MockedComponentError).toHaveBeenCalled();
       expect(element).toBeInTheDocument();
     });
   });

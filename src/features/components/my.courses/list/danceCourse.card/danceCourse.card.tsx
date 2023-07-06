@@ -8,7 +8,7 @@ type Propstype = {
 
 export function DanceCourseCard({ item }: Propstype) {
   return (
-    <Link to="/">
+    <Link to={"/details/" + item.id}>
 
       <li key={item.id} className={style.product}>
         <div className={style.danceCourseImageContainer}>

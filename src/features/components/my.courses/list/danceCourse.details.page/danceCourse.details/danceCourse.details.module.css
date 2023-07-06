@@ -1,0 +1,112 @@
+.danceCourseDetailsSection {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(46, 45, 45);
+}
+
+.danceCourseDetailsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  width: 90%;
+  height: 85%;
+  position: relative;
+  top: 95px;
+  color: rgb(241, 238, 238);
+  background-color: rgb(34, 33, 33);
+  box-shadow: 1px 9px 20px rgb(6, 6, 6);
+  border-radius: 20px;
+}
+
+.danceCourseDetailsContainer:hover {
+  box-shadow: 3px 9px 20px rgb(0, 0, 0);
+}
+
+.danceCourseDetailsImageContainer {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  max-width: 100%;
+  margin-left: 40px;
+}
+
+.danceCourseDetailsImage {
+  object-fit: contain;
+  padding: 20px;
+  margin-left: 120px;
+}
+
+.danceCourseDetailsInformationContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.danceCourseDetailsDanceCourseName {
+  display: flex;
+}
+
+.danceCourseDetailsDanceCourseName {
+  font-size: 4rem;
+  font-weight: 800;
+  color: rgb(238, 237, 237);
+}
+
+.danceCourseDetailsLevelAndButtonContainer {
+  margin: 8px 0 0 30px;
+}
+
+.danceCourseLevel {
+  font-size: 2rem;
+  font-weight: 800;
+  color: rgb(167, 164, 164);
+}
+
+.danceCourseDetailsCoursePriceContainer {
+  margin: 70px 20px 0 0;
+}
+
+.danceCourseDetailsCoursePrice {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: rgb(229, 232, 97);
+  margin: 0 40px 0 30px;
+}
+
+.addToCartButton {
+  width: 12em;
+  align-content: center;
+  font-size: 2rem;
+  padding: 20px 14px;
+  font-weight: 700;
+  transition: linear .3s;
+  cursor: hover;
+  border-radius: 8px;
+  border: 2px solid rgb(238, 233, 233);
+  box-shadow: 2px 2px 10px rgb(0, 0, 0);
+  color: rgb(227, 223, 223);
+  background-color: #922424;
+  font-family: inherit;
+}
+
+.addToCartButton:hover {
+  background-color: rgb(20, 20, 20);
+}
+
+.danceCourseDetailsTotalClassesContainer {
+  margin: 50px 40px 0 30px;
+}
+
+.danceCourseDetailsTotalClasses {
+  font-size: 1.4rem;
+}
+
+.danceCourseDetailsLargeDescriptionContainer {
+  margin: 30px 40px 0 30px;
+}
+
+.danceCourseDetailsLargeDescription {
+  font-size: 1.4rem;
+  font-style: italic;
+}

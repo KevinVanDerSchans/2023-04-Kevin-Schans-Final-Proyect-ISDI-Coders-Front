@@ -1,5 +1,4 @@
 import { Header } from "../../../header/header";
-import { Footer } from "../../../footer/footer";
 import { NavOptions } from "../../../../types/nav.options";
 import { DanceCourseDetails } from "./danceCourse.details/danceCourse.details";
 
@@ -15,7 +14,6 @@ export default function DanceCourseDetailsPage() {
     <>
       <Header options={options}></Header>
       <DanceCourseDetails></DanceCourseDetails>
-      <Footer></Footer>
     </>
   );
 }

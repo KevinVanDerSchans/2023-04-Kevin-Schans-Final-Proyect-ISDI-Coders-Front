@@ -45,11 +45,12 @@ const usersSlice = createSlice({
       loginError: null,
     }),
   },
-
   extraReducers: (builder) => {
+
     builder.addCase(registerUserAsync.fulfilled, (state, { payload }) => ({
       ...state,
       users: [...state.users, payload],
+      loginError: false,
     }));
 
     builder.addCase(loginUserAsync.fulfilled, (state, { payload }) => ({
@@ -72,7 +73,6 @@ const usersSlice = createSlice({
   },
 });
 
-export default usersSlice.reducer;
 export const ac = usersSlice.actions;
-
+export default usersSlice.reducer;
 

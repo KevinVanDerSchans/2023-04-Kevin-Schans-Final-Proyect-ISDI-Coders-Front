@@ -7,7 +7,7 @@ import style from "../navControls/nav.controls.module.css"
 import { useNavigate } from "react-router-dom";
 import { useUsers } from "../../hooks/use.users";
 import { useSelector } from "react-redux";
-import { RootState } from "../../../core/store/store";
+import { RootState, store } from "../../../core/store/store";
 import Swal from 'sweetalert2';
 
 export function NavControls() {
@@ -31,12 +31,14 @@ export function NavControls() {
 
     const Toast = Swal.mixin({
       toast: true,
-      position: 'top-end',
+      iconColor: 'red',
+      position: 'center',
       showConfirmButton: false,
       timer: 2300,
       timerProgressBar: true,
-      color: 'black',
-      background: 'white',
+      color: 'white',
+        background:
+          "linear-gradient(to left, rgb(146, 36, 36), rgba(0, 0, 0))",
       didOpen: (toast) => {
         toast.addEventListener('mouseenter', Swal.stopTimer)
         toast.addEventListener('mouseleave', Swal.resumeTimer)
@@ -50,9 +52,21 @@ export function NavControls() {
     })
   }
 
+  const admin = store.getState().users.role;
+  console.log(admin);
+
+
   return (
     <div className={style.navControls}>
 
+      {
+        admin === 'admin' ?
+        <div className={style.createANewCourseButtonContainer}>
+          <button className={style.createANewCourseButton}>Create new course</button>
+        </div>
+
+        : ""
+      }
 
       { token ? (
         <>

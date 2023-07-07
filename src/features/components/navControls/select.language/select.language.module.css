@@ -1,9 +1,11 @@
 .selectLanguageContainer {
   margin-right: 24px;
   cursor: default;
+  pointer-events: none;
 }
 
 .englishLanguageImage {
   margin-bottom: 2px;
   cursor: default;
+  pointer-events: none;
 }

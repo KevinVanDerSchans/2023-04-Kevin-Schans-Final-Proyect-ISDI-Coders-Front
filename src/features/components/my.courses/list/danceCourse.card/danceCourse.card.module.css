@@ -13,6 +13,7 @@
 
 .product:hover {
   transform: translateY(-18px);
+  background-color: rgb(39, 38, 38);
   box-shadow: 3px 9px 20px rgb(0, 0, 0);
 }
 
@@ -22,7 +23,7 @@
 
 .danceCourseImageContainer {
   display: grid;
-  width: 100%;
+  max-width: 100%;
   justify-content: center;
   text-align: center;
 }

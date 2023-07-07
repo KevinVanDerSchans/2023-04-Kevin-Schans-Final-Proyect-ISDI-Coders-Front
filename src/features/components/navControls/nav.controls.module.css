@@ -14,7 +14,8 @@
   font-family: inherit;
 }
 
-.logOutButton {
+.logOutButton,
+.createANewCourseButton {
   width: 5em;
   text-align: center;
   align-content: center;
@@ -34,10 +35,11 @@
   margin: 0 30px 6px 0;
 }
 
-.logOutButton:hover {
+.logOutButton:hover,
+.createANewCourseButton:hover {
   background-color: rgb(20, 20, 20);
 }
 
-.hola {
-  font-size: 500px;
+.createANewCourseButton {
+  width: 10em;
 }

@@ -7,7 +7,7 @@ export type UsersState = {
   users: User[];
   currentUser: Partial<User>;
   token?: string,
-  role: string | undefined,
+  role?: string | undefined,
   loginError: boolean | null;
 };
 
@@ -57,7 +57,8 @@ const usersSlice = createSlice({
       ...state,
       currentUser: payload,
       token: payload.token,
-      // role: payload.role,
+      role: payload.user.role,
+
       loginError: false,
     }));
 

@@ -31,7 +31,6 @@ export function NavControls() {
 
     const Toast = Swal.mixin({
       toast: true,
-      iconColor: 'red',
       position: 'center',
       showConfirmButton: false,
       timer: 2300,
@@ -47,6 +46,7 @@ export function NavControls() {
 
     Toast.fire({
       icon: 'success',
+      iconColor: 'red',
       title: "You've successfully logged out!",
       text: 'Hope to see you soon!'
     })

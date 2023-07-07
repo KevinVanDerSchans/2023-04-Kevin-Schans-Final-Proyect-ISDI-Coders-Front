@@ -1,8 +1,10 @@
 .myCartContainer {
   cursor: default;
   margin: 0 10px 6px 0;
+  pointer-events: none;
 }
 
 .myCartIcon {
   cursor: default;
+  pointer-events: none;
 }

@@ -23,8 +23,10 @@ export function DanceCourseDetails() {
             <ButtonToMyCoursesPage></ButtonToMyCoursesPage>
           </div>
 
-          <div className={style.danceCourseDetailsImageContainer}>
-            <img src={item.image.url} alt={item.courseName} className={style.danceCourseDetailsImage} style={{height: "38.5em"}}/>
+          <div className={style.danceCourseDetailsVideoContainer}>
+
+            <video src={item.video.url} muted autoPlay loop className={style.danceCourseDetailsVideo}></video>
+
           </div>
         </div>
 

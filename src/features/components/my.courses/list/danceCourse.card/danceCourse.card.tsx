@@ -12,11 +12,10 @@ export function DanceCourseCard({ item }: Propstype) {
 
       <li key={item.id} className={style.product}>
         <div className={style.danceCourseImageContainer}>
-            <img src={item.image.url} alt="" style={{width: "16em"}} className={style.danceCourseImage}/>
+            <img src={item.image.url} alt={item.courseName} style={{width: "16em"}} className={style.danceCourseImage}/>
         </div>
 
         <div className={style.danceCourseDescriptionContainer}>
-
 
           <div className={style.danceCourseNameAndPriceContainer}>
             <span className={style.danceCourseName}>{item.courseName.toUpperCase()}</span>

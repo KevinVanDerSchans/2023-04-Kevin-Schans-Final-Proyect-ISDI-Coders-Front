@@ -1,8 +1,10 @@
 .userInterfaceContainer {
   margin: 0 12px 6px 0;
   cursor: default;
+  pointer-events: none;
 }
 
 .userInterfaceIcon {
   cursor: default;
+  pointer-events: none;
 }

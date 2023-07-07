@@ -27,7 +27,6 @@ const danceCoursesSlice = createSlice({
     builder.addCase(loadDanceCoursesAsync.fulfilled, (state, { payload }) => ({
       ...state,
       danceCourses: payload,
-
     }));
   }
 });

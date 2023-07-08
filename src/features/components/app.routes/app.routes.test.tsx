@@ -154,5 +154,4 @@ describe('Given the AppRoutes component', () => {
       expect(element).toBeInTheDocument();
     });
   });
-
 });

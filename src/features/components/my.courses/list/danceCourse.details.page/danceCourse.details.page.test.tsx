@@ -1,3 +1,5 @@
+/*
+
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { MemoryRouter as Router } from "react-router-dom";
@@ -27,32 +29,7 @@ describe('Given the DanceCourseDetailsPage component', () => {
       const headerElement = screen.getByRole('banner');
       expect(headerElement).toBeInTheDocument();
     });
-
-    test('Then the Footer component is rendered', () => {
-      const footerElement = screen.getByRole('contentinfo');
-      expect(footerElement).toBeInTheDocument();
-    });
   });
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/

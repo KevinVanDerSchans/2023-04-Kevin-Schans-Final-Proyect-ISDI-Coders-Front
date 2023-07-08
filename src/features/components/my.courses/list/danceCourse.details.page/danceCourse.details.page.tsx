@@ -14,6 +14,7 @@ export default function DanceCourseDetailsPage() {
     <>
       <Header options={options}></Header>
       <DanceCourseDetails></DanceCourseDetails>
+
     </>
   );
 }

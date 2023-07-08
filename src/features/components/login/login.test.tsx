@@ -25,6 +25,7 @@ describe("Given the Login component", () => {
 
     test("Then the <button> should be used", async () => {
       const element = screen.getByRole("button");
+
       await fireEvent.click(element);
     });
   });

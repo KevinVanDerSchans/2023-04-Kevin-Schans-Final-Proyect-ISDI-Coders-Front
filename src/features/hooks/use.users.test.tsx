@@ -72,7 +72,6 @@ describe("Given the useUsers custom hook", () => {
 
     test("Then the handleGetToken function should be called", async () => {
       await userEvent.click(elements[2]);
-
     });
 
     test("Then the handleLogoutUser function should be called", async () => {

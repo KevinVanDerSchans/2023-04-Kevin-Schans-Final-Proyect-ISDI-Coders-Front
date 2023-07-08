@@ -59,11 +59,8 @@ describe("Given the useUsers custom hook", () => {
         await userEvent.click(elements[0]);
 
         await act(async () => {
-          await userEvent.click(elements[0]);
-          await act(async () => {
-            store.dispatch(registerUserAsync({ repo: mockRepo, user: mockUser }))
-          });
-        })
+          store.dispatch(registerUserAsync({ repo: mockRepo, user: mockUser }))
+        });
         expect(mockRepo.register).toHaveBeenCalled();
       });
     });
@@ -82,7 +79,7 @@ describe("Given the useUsers custom hook", () => {
 
     test("Then the handleLogoutUser function should be called", async () => {
       await act(async () => {
-        await userEvent.click(elements[2]);
+        await userEvent.click(elements[3]);
         store.dispatch(ac.logoutUser());
     });
   });

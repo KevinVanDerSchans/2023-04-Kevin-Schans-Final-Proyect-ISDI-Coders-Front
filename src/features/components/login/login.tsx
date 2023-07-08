@@ -42,7 +42,6 @@ export default function Login() {
   };
 
   useEffect(() => {
-
     if (loginError === null) {
       return;
     }
@@ -93,7 +92,7 @@ export default function Login() {
         </div>
 
         <div className={style.logInButtonFormInputContainer}>
-          <button className={style.logInButton} type="submit" role="button" aria-selected="true">Log in</button>
+          <button className={style.logInButton} type="submit" aria-selected="true">Log in</button>
         </div>
 
       </form>

@@ -3,7 +3,7 @@ import { DanceCourseCard } from "./danceCourse.card/danceCourse.card";
 import style from "./list.module.css"
 import { useEffect } from "react";
 
-export function List() {
+export default function List() {
 
   const { danceCourses, loadDanceCourses } = useDanceCourses();
 

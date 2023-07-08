@@ -1,9 +1,10 @@
-import { Header } from "../header/header";
 import { NavOptions } from "../../types/nav.options";
-import List  from "./list/list";
 import { Footer } from "../footer/footer";
+import { Header } from "../header/header";
+import { DanceCourseCreateForm } from "./danceCourse.create.form/danceCourse.create.form";
+// import style from "./form.page.module.css";
 
-export default function MyCourses() {
+export default function Form() {
 
   const options: NavOptions[] = [
     { url: '/', label: 'HOME' },
@@ -14,8 +15,8 @@ export default function MyCourses() {
   return (
     <>
       <Header options={options}></Header>
-      <List></List>
+      <DanceCourseCreateForm></DanceCourseCreateForm>
       <Footer></Footer>
     </>
-  );
+  )
 }

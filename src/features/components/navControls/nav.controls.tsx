@@ -4,7 +4,7 @@ import { SelectLanguage } from './select.language/select.language';
 import { UserInterface } from './user.interface/user.interface';
 import style from "../navControls/nav.controls.module.css"
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useUsers } from "../../hooks/use.users";
 import { useSelector } from "react-redux";
 import { RootState, store } from "../../../core/store/store";
@@ -53,8 +53,6 @@ export function NavControls() {
   }
 
   const admin = store.getState().users.role;
-  console.log(admin);
-
 
   return (
     <div className={style.navControls}>
@@ -62,7 +60,9 @@ export function NavControls() {
       {
         admin === 'admin' ?
         <div className={style.createANewCourseButtonContainer}>
-          <button className={style.createANewCourseButton}>Create new course</button>
+          <Link to="/form">
+            <button className={style.createANewCourseButton}>Create new course</button>
+          </Link>
         </div>
 
         : ""

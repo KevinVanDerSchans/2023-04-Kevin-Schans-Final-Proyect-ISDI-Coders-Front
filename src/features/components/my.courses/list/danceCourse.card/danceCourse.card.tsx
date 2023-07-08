@@ -11,6 +11,7 @@ export function DanceCourseCard({ item }: Propstype) {
     <Link to={"/details/" + item.id}>
 
       <li key={item.id} className={style.product}>
+
         <div className={style.danceCourseImageContainer}>
             <img src={item.image.url} alt={item.courseName} style={{width: "16em"}} className={style.danceCourseImage}/>
         </div>

@@ -84,12 +84,12 @@ export default function Login() {
 
         <div className={style.formInputContainer}>
           <label htmlFor="user"></label>
-          <input className={style.formInput} type="text" id="user" name="userName" placeholder="Username" />
+          <input className={style.formInput} type="text" id="user" name="userName" placeholder="Username" autoComplete="off"/>
         </div>
 
         <div className={style.formInputContainer}>
           <label htmlFor="password"></label>
-          <input className={style.formInput} type="password" id="password" name="password" placeholder="Password" />
+          <input className={style.formInput} type="password" id="password" name="password" placeholder="Password" autoComplete="off"/>
         </div>
 
         <div className={style.logInButtonFormInputContainer}>

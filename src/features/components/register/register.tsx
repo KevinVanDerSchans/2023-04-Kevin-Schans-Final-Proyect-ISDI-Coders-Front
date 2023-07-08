@@ -55,17 +55,17 @@ export default function Register() {
 
           <div className={style.registerFormContainer}>
             <label htmlFor="user"></label>
-            <input className={style.formInput} type="text" id="user" name="user" placeholder="Username" />
+            <input className={style.formInput} type="text" id="user" name="user" placeholder="Username" autoComplete="off"/>
           </div>
 
           <div className={style.registerFormContainer}>
             <label htmlFor="email"></label>
-            <input className={style.formInput} type="email" id="email" name="email" placeholder="E-mail address" />
+            <input className={style.formInput} type="email" id="email" name="email" placeholder="E-mail address" autoComplete="off"/>
           </div>
 
           <div className={style.registerFormContainer}>
             <label htmlFor="password"></label>
-            <input className={style.formInput} type="password" id="password" name="password" placeholder="Password" />
+            <input className={style.formInput} type="password" id="password" name="password" placeholder="Password" autoComplete="off"/>
           </div>
 
           <div className={style.registerButtonFormInputContainer}>

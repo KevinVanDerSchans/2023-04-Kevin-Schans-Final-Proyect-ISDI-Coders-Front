@@ -10,6 +10,7 @@ export function Hero() {
         <video className={style.heroVideo} src="/assets/heroVideo.mp4" role="video" muted autoPlay loop style={{height: '90vh'}}></video>
 
         <div className={style.heroText}>
+
           <div>
             <h1>Shall we dance?</h1>
           </div>

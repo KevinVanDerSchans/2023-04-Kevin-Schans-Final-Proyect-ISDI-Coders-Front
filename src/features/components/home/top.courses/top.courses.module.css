@@ -1,0 +1,92 @@
+.showTopCouses {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.showTopCoursesContainer {
+  width: 100%;
+  justify-content: center;
+  padding: 20px 50px;
+  margin-top: 20px;
+}
+
+.topCoursesTitle {
+  font-size: 3.2rem;
+  text-align: center;
+  color: rgb(234, 233, 233);
+}
+
+.listOfDances {
+  display: flex;
+  text-align: center;
+  color: rgb(242, 238, 238);
+  margin: 20px;
+}
+
+.topCoursesDance {
+  width: 100%;
+  padding: 110px 20px;
+  margin: 20px;
+  border-radius: 16px;
+  box-shadow: 3px 3px 12px rgb(0, 0, 0);
+}
+
+.topCoursesDance:first-child {
+  background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+  )
+  ,url('/assets/topCoursesSalsa.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.topCoursesDance:nth-child(2) {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+  )
+  ,url('/assets/topCoursesBachata.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.topCoursesDance:nth-child(3) {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+  )
+  ,url('/assets/topCoursesHipHop.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.titleDance {
+  font-size: 2.8em;
+  margin-top: 40px;
+}
+
+.topCoursesButton {
+  padding: 12px 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: linear .3s;
+  cursor: default;
+  border-radius: 8px;
+  border: 3px solid rgb(0, 0, 0);
+  box-shadow: 2px 2px 10px rgb(0, 0, 0);
+  color: rgb(227, 223, 223);
+  background-color: #922424;
+  font-family: inherit;
+}
+
+.topCoursesButton:hover {
+  background-color: rgb(20, 20, 20);
+}

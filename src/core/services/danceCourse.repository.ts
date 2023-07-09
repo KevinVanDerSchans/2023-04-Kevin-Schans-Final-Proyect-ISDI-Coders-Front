@@ -20,9 +20,20 @@ export class DanceCourseRepository {
     const response = await fetch(this.url + "/", {
       method: "POST",
       body: item,
-      // headers: { Authorization: "Bearer" + this.token },
     });
 
     return response.json() as Promise<DanceCourse>;
+  }
+
+  async delete(id: DanceCourse["id"]): Promise<boolean> {
+    const response = await fetch(this.url + "/" + id, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer" + this.token,
+      }
+    });
+
+    return response.ok;
   }
 }

@@ -1,3 +1,8 @@
+.articleContainer {
+  display: flex;
+  gap: 10px;
+}
+
 .product {
   position: relative;
   width: 24em;
@@ -9,6 +14,7 @@
   background-color:#312f2f;
   transition: .5s;
   cursor: pointer;
+  z-index: 0;
 }
 
 .product:hover {
@@ -109,7 +115,6 @@
   transition: linear .3s;
   border-radius: 8px;
   border: 3px solid rgb(0, 0, 0);
-
   color: rgb(227, 223, 223);
   background-color: #922424;
   font-family: inherit;
@@ -118,4 +123,29 @@
 
 .buyNowButton:hover {
   background-color: rgb(20, 20, 20);
+}
+
+.deleteButtonContainer {
+  display: flex;
+  cursor: pointer;
+}
+
+.deleteButton {
+  display: flex;
+  position: absolute;
+  background: none;
+  background-color: transparent;
+  border-radius: 12%;
+  border: 3px solid rgb(56, 54, 54);
+}
+
+.deleteButton:hover {
+  background-color: rgb(173, 62, 62);
+  border: 3px solid rgb(229, 227, 227);
+}
+
+.deleteIcon {
+  padding: 10px;
+  border-radius: 10%;
+  cursor: pointer;
 }

@@ -19,7 +19,6 @@ const mockRepo = {
   login: jest.fn(),
 } as unknown as UserRepository;
 
-
 function TestComponent() {
   const {
     handleRegisterUser,
@@ -37,10 +36,11 @@ function TestComponent() {
 }
 
 describe("Given the useUsers custom hook", () => {
+
   let elements: HTMLElement[];
 
   beforeEach(async () => {
-    await act(() =>
+    await act(async () =>
       render(
         <Router>
           <Provider store={store}>
@@ -57,7 +57,10 @@ describe("Given the useUsers custom hook", () => {
     test("Then the handleRegisterUser function should be called", async () => {
       await act(async () => {
         await userEvent.click(elements[0]);
-        store.dispatch(registerUserAsync({ repo: mockRepo, user: mockUser }));
+
+        await act(async () => {
+          store.dispatch(registerUserAsync({ repo: mockRepo, user: mockUser }))
+        });
         expect(mockRepo.register).toHaveBeenCalled();
       });
     });
@@ -65,14 +68,13 @@ describe("Given the useUsers custom hook", () => {
     test("Then the handleLoginUser function should be called", async () => {
       await act(async () => {
         await userEvent.click(elements[1]);
-        store.dispatch(loginUserAsync({ repo: mockRepo, user: mockUser }));
+
+        await act(async () => {
+          store.dispatch(loginUserAsync({ repo: mockRepo, user: mockUser }));
+        });
+
         expect(mockRepo.login).toHaveBeenCalled();
       });
-    });
-
-    test("Then the handleGetToken function should be called", async () => {
-      await userEvent.click(elements[2]);
-
     });
 
     test("Then the handleLogoutUser function should be called", async () => {

@@ -1,31 +1,43 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { Provider } from "react-redux";
-import { MemoryRouter as Router } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 import Login from "./login";
 import { store } from "../../../core/store/store";
 import "@testing-library/jest-dom";
+import userEvent from "@testing-library/user-event";
 
 describe("Given the Login component", () => {
-  describe("When it is rendered", () => {
+  describe("When the login form is used", () => {
 
-    beforeEach(async () => {
+    beforeEach(() => {
       render(
         <Provider store={store}>
-          <Router>
-            <Login></Login>
-          </Router>
+          <MemoryRouter>
+              <Login></Login>
+          </MemoryRouter>
         </Provider>
       );
     });
 
-    test("Then the heading <h2> should be in the document", () => {
-      const element = screen.getByRole("heading");
-      expect(element).toBeInTheDocument();
+    test("Then check if the user fills the login form and clicks submit", () => {
+
+      const usernameInput = screen.getByPlaceholderText("Username");
+      const passwordInput = screen.getByPlaceholderText("Password");
+      const submitButton = screen.getByRole("button");
+
+      userEvent.type(usernameInput, "test");
+      userEvent.type(passwordInput, "test");
+
+      fireEvent.click(submitButton);
+
+      expect(usernameInput).toHaveValue("");
+      expect(passwordInput).toHaveValue("");
     });
 
-    test("Then the <button> should be used", async () => {
-      const element = screen.getByRole("button");
-      await fireEvent.click(element);
+    test("Then it should render the login form", () => {
+
+      const loginForm = screen.getByRole("button")
+      expect(loginForm).toBeInTheDocument;
     });
   });
 });

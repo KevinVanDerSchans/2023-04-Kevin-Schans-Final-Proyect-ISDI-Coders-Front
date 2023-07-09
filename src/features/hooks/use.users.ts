@@ -21,7 +21,6 @@ export function useUsers() {
     await dispatch(loginUserAsync({ repo, user }));
   };
 
-
   const handleLogoutUser = () => {
     dispatch(ac.logoutUser());
     localStorage.removeItem("userToken");

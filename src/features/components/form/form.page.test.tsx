@@ -2,17 +2,17 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { MemoryRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
-import { store } from "../../../../../core/store/store";
-import DanceCourseDetailsPage from "./danceCourse.details.page";
+import { store } from "../../../core/store/store";
+import Form from "./form.page";
 
-describe('Given the DanceCourseDetailsPage component', () => {
+describe('Given the Form component', () => {
   describe('When it is instantiated', () => {
 
     beforeEach(() => {
       render(
         <Provider store={store}>
           <Router>
-            <DanceCourseDetailsPage></DanceCourseDetailsPage>
+          <Form></Form>
           </Router>
         </Provider>
       );
@@ -23,9 +23,9 @@ describe('Given the DanceCourseDetailsPage component', () => {
       expect(headerElement).toBeInTheDocument();
     });
 
-    test('Then the DanceCourseDetails should be in the document', () => {
-      const headerElement = screen.getByRole('banner');
-      expect(headerElement).toBeInTheDocument();
+    test('Then the DanceCourseCreateForm should be in the document', () => {
+      const danceCourseCreateFormElement = screen.getByRole('banner');
+      expect(danceCourseCreateFormElement).toBeInTheDocument();
     });
 
     test('Then the Footer component is rendered', () => {
@@ -34,25 +34,3 @@ describe('Given the DanceCourseDetailsPage component', () => {
     });
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

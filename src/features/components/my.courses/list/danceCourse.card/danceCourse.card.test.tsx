@@ -1,18 +1,29 @@
-import { DanceCourse } from "../../../../models/danceCourse";
 import { DanceCourseCard } from "./danceCourse.card";
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter as Router } from "react-router-dom";
 import "@testing-library/jest-dom";
+import { DanceCourse } from "../../../../models/danceCourse";
 
-const mockDanceCourse = {
+const mockDanceCourse: DanceCourse = {
   id: '3',
-  image: {
-    url: 'line-salsa.png'
-  },
   courseName: 'line salsa',
-  priceCourse: '19,99',
-  initialDescription: 'abc',
   level: 'Intermediate',
+  priceCourse: '19,99',
+  totalClasses: 10,
+  initialDescription: 'abc',
+  largeDescription: "abcdef",
+  image: {
+    urlOriginal: "",
+    url: "https://example.image.jpg",
+    mimetype: "",
+    size: 0,
+  },
+  video: {
+    urlOriginal: "",
+    url: "https://example.video.jpg",
+    mimetype: "",
+    size: 0,
+  },
 }
 
 describe("Given the DanceCourseCard component", () => {
@@ -21,7 +32,7 @@ describe("Given the DanceCourseCard component", () => {
     beforeEach(() => {
       render(
         <Router>
-          <DanceCourseCard item={mockDanceCourse as DanceCourse}></DanceCourseCard>
+          <DanceCourseCard item={mockDanceCourse}></DanceCourseCard>
         </Router>
       );
     });

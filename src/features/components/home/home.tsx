@@ -2,6 +2,8 @@ import { Header } from '../header/header';
 import { NavOptions } from '../../types/nav.options';
 import { Footer } from '../footer/footer';
 import { Hero } from './hero/hero';
+import { TopCourses } from './top.courses/top.courses';
+import style from "./home.module.css"
 
 export default function Home() {
   const options: NavOptions[] = [
@@ -12,9 +14,14 @@ export default function Home() {
 
   return (
     <>
+    <div className={style.main}>
+
       <Header options={options}></Header>
       <Hero></Hero>
+      <TopCourses></TopCourses>
       <Footer></Footer>
+
+      </div>
     </>
   );
 }

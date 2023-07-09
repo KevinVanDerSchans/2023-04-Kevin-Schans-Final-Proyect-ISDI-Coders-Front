@@ -31,6 +31,14 @@ export const createDanceCoursesAsync = createAsyncThunk<
   return await repo.create(danceCourse);
 });
 
+export const deleteDanceCourseAsync = createAsyncThunk<
+  string,
+  { repo: DanceCourseRepository; id: DanceCourse["id"] }
+  >("danceCourse/delete", async ({ id, repo }) => {
+  const response = await repo.delete(id);
+  return response ? id : "";
+});
+
 const danceCoursesSlice = createSlice({
   name: "danceCourses",
   initialState,
@@ -46,6 +54,7 @@ const danceCoursesSlice = createSlice({
   },
 
   extraReducers: (builder) => {
+
     builder.addCase(loadDanceCoursesAsync.fulfilled, (state, { payload }) => ({
       ...state,
       danceCourses: payload,
@@ -54,8 +63,16 @@ const danceCoursesSlice = createSlice({
     builder.addCase(createDanceCoursesAsync.fulfilled, (state, { payload }) => ({
       ...state,
       danceCourses: [...state.items, payload]
+    }));
 
-    }))
+    builder.addCase(deleteDanceCourseAsync.fulfilled, (state, { payload }) => {
+      return {
+        ...state,
+        danceCourses: state.danceCourses.filter(
+          (danceCourse) => danceCourse.id !== payload
+        ),
+      };
+    });
   }
 });
 

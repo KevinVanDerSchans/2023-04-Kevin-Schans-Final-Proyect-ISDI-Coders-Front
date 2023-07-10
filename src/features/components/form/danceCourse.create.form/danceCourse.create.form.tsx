@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 
 export function DanceCourseCreateForm() {
 
-  const { createDanceCourses} = useDanceCourses();
+  const { createDanceCourses } = useDanceCourses();
 
   const handleSubmit = (event: SyntheticEvent ) => {
     event.preventDefault();

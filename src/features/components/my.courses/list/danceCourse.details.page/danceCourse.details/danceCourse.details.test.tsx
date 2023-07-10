@@ -4,7 +4,6 @@ import { Provider } from "react-redux";
 import { store } from "../../../../../../core/store/store";
 import "@testing-library/jest-dom";
 import { DanceCourseDetails } from "./danceCourse.details";
-// import { useDanceCourses } from "../../../../../hooks/use.danceCourses";
 
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),

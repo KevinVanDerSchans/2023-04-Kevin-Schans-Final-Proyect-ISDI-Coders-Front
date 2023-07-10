@@ -10,7 +10,7 @@
   color:rgb(117, 117, 102);
   background-color: rgb(71, 68, 67);
   z-index: -1;
-  /* TEMP margin-left: 5em; */
+  margin-left: 1em;
 }
 
 .navList {
@@ -18,7 +18,7 @@
 }
 
 .navLabel {
-  padding: 3px 42px;
+  padding: 3px 100px;
   font-weight: 600;
   padding-bottom: 3px;
 }
@@ -29,5 +29,5 @@
 }
 
 a:hover {
-  color: black;
+  color: rgb(153, 22, 22);
 }

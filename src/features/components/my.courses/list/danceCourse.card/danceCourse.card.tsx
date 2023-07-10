@@ -4,7 +4,7 @@ import style from "./danceCourse.card.module.css"
 import { useDanceCourses } from "../../../../hooks/use.danceCourses";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-// import { store } from "../../../../../core/store/store";
+import { store } from "../../../../../core/store/store";
 
 type Propstype = {
   item: DanceCourse,
@@ -12,7 +12,7 @@ type Propstype = {
 
 export function DanceCourseCard({ item }: Propstype) {
 
-  // const admin = store.getState().users.role;
+  const admin = store.getState().users.role;
 
   const { deleteDanceCourses, danceCourses } = useDanceCourses();
 
@@ -61,12 +61,17 @@ export function DanceCourseCard({ item }: Propstype) {
         </Link>
       </div>
 
-      <div className={style.deleteButtonContainer}>
-        <button className={style.deleteButton} onClick={() => handleDelete(item.id)} >
-          <FontAwesomeIcon className={style.deleteIcon} icon={faTrash} size="2xl" style={{color: "#e9eaec",}} />
-        </button>
-      </div>
+      {
+        admin === 'admin' ?
+        <div className={style.deleteButtonContainer}>
+          <button className={style.deleteButton} onClick={() => handleDelete(item.id)} >
+            <FontAwesomeIcon className={style.deleteIcon} icon={faTrash} size="2xl" style={{color: "#e9eaec",}} />
+          </button>
+        </div>
 
-  </article>
+        : ""
+      }
+
+    </article>
   );
 }

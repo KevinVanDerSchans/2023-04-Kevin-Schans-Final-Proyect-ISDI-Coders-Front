@@ -66,5 +66,29 @@ describe("UserRepository", () => {
       });
       expect(loggedInUser).toEqual(mockResponse);
     });
+
+    test("Then it should throw an error if the fetch doesn't work", async () => {
+      const user = {
+        email: "erikvdsd@hotmail.com",
+        password: "12345",
+      };
+      const error = new Error("Login Error");
+
+      const expectedUrl = "https://kevin-schans-alexandmelanie.com/user/login";
+
+      global.fetch = jest.fn().mockResolvedValue({
+        ok: false,
+        status: 400,
+        statusText: "Login Error",
+      });
+
+      await expect(userRepository.login(user)).rejects.toThrow(error);
+
+      expect(global.fetch).toHaveBeenCalledWith(expectedUrl, {
+        method: "PATCH",
+        body: JSON.stringify(user),
+        headers: { "Content-Type": "application/json" },
+      });
+    });
   });
 });

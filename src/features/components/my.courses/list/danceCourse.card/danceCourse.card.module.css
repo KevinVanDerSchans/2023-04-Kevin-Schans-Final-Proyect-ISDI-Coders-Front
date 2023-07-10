@@ -127,6 +127,8 @@
 
 .deleteButtonContainer {
   display: flex;
+  position: absolute;
+  margin: 12px 0 0 310px;
   cursor: pointer;
 }
 
@@ -134,9 +136,9 @@
   display: flex;
   position: absolute;
   background: none;
-  background-color: transparent;
+  background-color: rgb(41, 39, 39);
   border-radius: 12%;
-  border: 3px solid rgb(56, 54, 54);
+  border: 3px solid rgb(125, 122, 122);
 }
 
 .deleteButton:hover {

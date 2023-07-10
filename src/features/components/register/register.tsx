@@ -11,6 +11,7 @@ export default function Register() {
   const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault();
     const formElement = event.target as HTMLFormElement;
+
     const data = {
       userName: (formElement.elements.namedItem("user") as HTMLInputElement).value,
       email: (formElement.elements.namedItem("email") as HTMLInputElement).value,
@@ -39,7 +40,7 @@ export default function Register() {
         icon: 'success',
         title: `Welcome ${data.userName} !`,
         text: 'Account successfully created.',
-        showConfirmButton: false,
+        showConfirmButton: true,
         color: 'white',
         background:
           "linear-gradient(to bottom, rgb(146, 36, 36), rgba(0, 0, 0))",
@@ -50,31 +51,30 @@ export default function Register() {
   };
 
   return (
-      <div className={style.registerContainer}>
-        <h2 className={style.registerTitle}>Register</h2>
+    <div className={style.registerContainer}>
+      <h2 className={style.registerTitle}>Register</h2>
 
-        <form onSubmit={handleSubmit} className={style.registerFormContainer}>
+      <form onSubmit={handleSubmit} className={style.registerFormContainer}>
 
-          <div className={style.registerFormContainer}>
-            <label htmlFor="user"></label>
-            <input className={style.formInput} type="text" id="user" name="user" placeholder="Username" autoComplete="off"/>
-          </div>
+        <div className={style.registerFormContainer}>
+          <label htmlFor="user"></label>
+          <input className={style.formInput} type="text" id="user" name="user" placeholder="Username" autoComplete="off"/>
+        </div>
 
-          <div className={style.registerFormContainer}>
-            <label htmlFor="email"></label>
-            <input className={style.formInput} type="email" id="email" name="email" placeholder="E-mail address" autoComplete="off"/>
-          </div>
+        <div className={style.registerFormContainer}>
+          <label htmlFor="email"></label>
+          <input className={style.formInput} type="email" id="email" name="email" placeholder="E-mail address" autoComplete="off"/>
+        </div>
 
-          <div className={style.registerFormContainer}>
-            <label htmlFor="password"></label>
-            <input className={style.formInput} type="password" id="password" name="password" placeholder="Password" autoComplete="off"/>
-          </div>
+        <div className={style.registerFormContainer}>
+          <label htmlFor="password"></label>
+          <input className={style.formInput} type="password" id="password" name="password" placeholder="Password" autoComplete="off"/>
+        </div>
 
-          <div className={style.registerButtonFormInputContainer}>
-            <button className={style.registerButton} type="submit">Register</button>
-          </div>
-
-        </form>
-      </div>
+        <div className={style.registerButtonFormInputContainer}>
+          <button className={style.registerButton} type="submit">Register</button>
+        </div>
+      </form>
+    </div>
   );
 }

@@ -27,6 +27,7 @@ export default function Register() {
         background:
           "linear-gradient(to left, rgb(146, 36, 36), rgba(0, 0, 0))",
         imageAlt: 'Feedback alert for error register.',
+        timer: 2000,
       });
 
     } else {
@@ -38,11 +39,12 @@ export default function Register() {
         icon: 'success',
         title: `Welcome ${data.userName} !`,
         text: 'Account successfully created.',
-        showConfirmButton: true,
+        showConfirmButton: false,
         color: 'white',
         background:
           "linear-gradient(to bottom, rgb(146, 36, 36), rgba(0, 0, 0))",
         imageAlt: 'Feedback alert for successfully register.',
+        timer: 2000,
       });
     }
   };

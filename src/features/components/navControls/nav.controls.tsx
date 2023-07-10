@@ -29,26 +29,17 @@ export function NavControls() {
   const runLogout = () => {
     handleLogoutUser();
 
-    const Toast = Swal.mixin({
-      toast: true,
+    Swal.fire({
       position: 'center',
-      showConfirmButton: false,
-      timer: 2300,
-      timerProgressBar: true,
-      color: 'white',
-        background:
-          "linear-gradient(to left, rgb(146, 36, 36), rgba(0, 0, 0))",
-      didOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer)
-        toast.addEventListener('mouseleave', Swal.resumeTimer)
-      }
-    })
-
-    Toast.fire({
       icon: 'success',
       iconColor: 'red',
-      title: "You've successfully logged out!",
-      text: 'Hope to see you soon!'
+      title: 'You have successfully logged out!',
+      text: 'Hope to see you soon!',
+      showConfirmButton: false,
+      timer: 2000,
+      color: 'white',
+        background:
+        "linear-gradient(to left, rgb(146, 36, 36), rgba(0, 0, 0))",
     })
   }
 

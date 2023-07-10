@@ -16,7 +16,7 @@ export default function Register() {
       userName: (formElement.elements.namedItem("user") as HTMLInputElement).value,
       email: (formElement.elements.namedItem("email") as HTMLInputElement).value,
       password: (formElement.elements.namedItem("password") as HTMLInputElement).value,
-    } as unknown as Partial<User>;
+    } as Partial<User>;
 
     if (data.userName === "" || data.email === "" || data.password === "") {
       Swal.fire({
@@ -28,7 +28,7 @@ export default function Register() {
         background:
           "linear-gradient(to left, rgb(146, 36, 36), rgba(0, 0, 0))",
         imageAlt: 'Feedback alert for error register.',
-        timer: 2000,
+        showConfirmButton: true,
       });
 
     } else {
@@ -45,7 +45,7 @@ export default function Register() {
         background:
           "linear-gradient(to bottom, rgb(146, 36, 36), rgba(0, 0, 0))",
         imageAlt: 'Feedback alert for successfully register.',
-        timer: 2000,
+
       });
     }
   };
@@ -68,11 +68,11 @@ export default function Register() {
 
         <div className={style.registerFormContainer}>
           <label htmlFor="password"></label>
-          <input className={style.formInput} type="password" id="password" name="password" placeholder="Password" autoComplete="off"/>
+          <input className={style.formInput} type="password" id="password" name="password" role="textbox" data-testid="password" placeholder="Password" autoComplete="off"/>
         </div>
 
         <div className={style.registerButtonFormInputContainer}>
-          <button className={style.registerButton} type="submit">Register</button>
+          <button className={style.registerButton} role="button" type="submit">Register</button>
         </div>
       </form>
     </div>

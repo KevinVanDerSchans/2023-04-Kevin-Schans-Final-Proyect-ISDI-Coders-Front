@@ -5,10 +5,15 @@ import { store } from "../../../core/store/store";
 import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
 import Register from "./register";
+import Swal from "sweetalert2";
 
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),
   useNavigate: jest.fn(),
+}));
+
+jest.mock("sweetalert2", () => ({
+  fire: jest.fn(),
 }));
 
 describe("Given the Register component", () => {
@@ -49,6 +54,14 @@ describe("Given the Register component", () => {
       expect(usernameInput).toHaveValue("");
       expect(emailInput).toHaveValue("");
       expect(passwordInput).toHaveValue("");
+    });
+
+    test("Then the handleRegisterUser should be called on form submit", async () => {
+      const form = screen.getByRole("heading", { name: "Register" });
+      const button = screen.getByRole("button", { name: /register/i });
+      userEvent.click(button);
+      await fireEvent.submit(form);
+      expect(Swal.fire).toHaveBeenCalled();
     });
   });
 });

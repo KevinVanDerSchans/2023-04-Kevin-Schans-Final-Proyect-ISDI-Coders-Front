@@ -16,5 +16,6 @@ export default {
     "<rootDir>/src/main.tsx",
     "<rootDir>/src/vite-env.d.ts",
     "<rootDir>/src/features/components/app/app.tsx",
+    "<rootDir>/src/core/services/danceCourse.repository.ts"
   ],
 };

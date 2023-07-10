@@ -72,6 +72,6 @@ export function DanceCourseCard({ item }: Propstype) {
         : ""
       }
 
-  </article>
+    </article>
   );
 }

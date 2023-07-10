@@ -24,7 +24,7 @@ describe('Given the AppRoutes component', () => {
       element = screen.getByText("Home");
     });
 
-    test('Then it should ', () => {
+    test('Then it should be in the document', () => {
       expect(homeMockComponent).toHaveBeenCalled();
       expect(element).toBeInTheDocument();
     });

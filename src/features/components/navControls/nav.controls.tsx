@@ -17,6 +17,8 @@ export function NavControls() {
 
   const { token } = useSelector((state: RootState) => state.users);
 
+  const admin = store.getState().users.role;
+
   const handleUser = async () => {
     if (token) {
       runLogout();
@@ -43,18 +45,16 @@ export function NavControls() {
     })
   }
 
-  const admin = store.getState().users.role;
-
   return (
     <div className={style.navControls}>
 
       {
         admin === 'admin' ?
-        <div className={style.createANewCourseButtonContainer}>
-          <Link to="/form">
-            <button className={style.createANewCourseButton}>Create new course</button>
-          </Link>
-        </div>
+          <div className={style.createANewCourseButtonContainer}>
+            <Link to="/form">
+              <button className={style.createANewCourseButton}>Create new course</button>
+            </Link>
+          </div>
 
         : ""
       }

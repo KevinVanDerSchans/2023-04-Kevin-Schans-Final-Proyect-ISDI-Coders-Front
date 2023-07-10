@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { DanceCourse } from "../../../../models/danceCourse";
 import style from "./danceCourse.card.module.css"
 import { useDanceCourses } from "../../../../hooks/use.danceCourses";
@@ -14,20 +14,13 @@ export function DanceCourseCard({ item }: Propstype) {
 
   // const admin = store.getState().users.role;
 
-  const { id } = useParams();
-
   const { deleteDanceCourses, danceCourses } = useDanceCourses();
 
-  const danceCourseFull: DanceCourse = danceCourses.find(
-    (item: DanceCourse) => item.id === id) as DanceCourse;
+  const handleDelete = (id: string) => {
+    const danceCourseFull: DanceCourse = danceCourses.find(
+      (item: DanceCourse) => item.id === id) as DanceCourse;
 
-  const handleDelete = () => {
-    if(id) {
-      deleteDanceCourses(danceCourseFull.id)
-
-    } else {
-      console.log('error')
-    }
+    deleteDanceCourses(danceCourseFull.id)
   }
 
   return (
@@ -69,7 +62,7 @@ export function DanceCourseCard({ item }: Propstype) {
       </div>
 
       <div className={style.deleteButtonContainer}>
-        <button className={style.deleteButton} onClick={handleDelete}>
+        <button className={style.deleteButton} onClick={() => handleDelete(item.id)} >
           <FontAwesomeIcon className={style.deleteIcon} icon={faTrash} size="2xl" style={{color: "#e9eaec",}} />
         </button>
       </div>

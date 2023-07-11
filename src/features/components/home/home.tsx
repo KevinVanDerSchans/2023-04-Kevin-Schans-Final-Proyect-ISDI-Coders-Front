@@ -3,14 +3,18 @@ import { NavOptions } from '../../types/nav.options';
 import { Footer } from '../footer/footer';
 import { Hero } from './hero/hero';
 import { TopCourses } from './top.courses/top.courses';
-import { LearnOnline } from './learn.online/learn.online';
 import style from "./home.module.css";
+import { DiscoverYourStyle } from './discover.your.style/discover.your.style';
+import { AboutUs } from './about.us/about.us';
 
 export default function Home() {
   const options: NavOptions[] = [
     { url: '/', label: 'HOME' },
     { url: '/myCourses', label: 'MY COURSES' },
-    { url: '/contact', label: 'CONTACT' }
+    { url: '/discoverYourStyle', label: 'DISCOVER YOUR STYLE'},
+    { url: '/gallery', label: 'GALLERY' },
+    { url: '/whoAreWe', label: 'WHO ARE WE?'},
+    { url: '/contact', label: 'CONTACT' },
   ];
 
   return (
@@ -20,7 +24,8 @@ export default function Home() {
       <Header options={options}></Header>
       <Hero></Hero>
       <TopCourses></TopCourses>
-      <LearnOnline></LearnOnline>
+      <DiscoverYourStyle></DiscoverYourStyle>
+      <AboutUs></AboutUs>
       <Footer></Footer>
 
       </div>

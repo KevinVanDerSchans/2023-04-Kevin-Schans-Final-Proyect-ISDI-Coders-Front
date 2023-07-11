@@ -1,18 +1,18 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { MemoryRouter as Router } from "react-router-dom";
-import Contact from "../contact/contact"
 import { Provider } from "react-redux";
 import { store } from "../../../core/store/store";
+import DiscoverYourStylePage from "./discover.your.style.page";
 
-describe('Given the Contact component', () => {
+describe('Given the DiscoverYourStyle component', () => {
   describe('When it is instantiated', () => {
 
     beforeEach(() => {
       render(
         <Provider store={store}>
           <Router>
-            <Contact></Contact>
+            <DiscoverYourStylePage></DiscoverYourStylePage>
           </Router>
         </Provider>
       );

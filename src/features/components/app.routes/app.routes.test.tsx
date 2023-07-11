@@ -55,6 +55,81 @@ describe('Given the AppRoutes component', () => {
     });
   });
 
+  describe("When it is instantiated with the DiscoverYourStyle route", () => {
+
+    const discoverYourStyleMockComponent = jest.fn().mockReturnValue(<h1>Discover your Style</h1>);
+    jest.mock("../discover.your.style.page/discover.your.style.page", () => discoverYourStyleMockComponent);
+
+    let element: HTMLElement;
+
+    beforeEach(async () => {
+      await act(async () => {
+        render(
+          <Router initialEntries={["/discoverYourStyle"]} initialIndex={0}>
+            <AppRoutes></AppRoutes>
+          </Router>
+        );
+      });
+
+      element = screen.getByText("Discover your Style");
+    });
+
+    test("Then it should be in the document", () => {
+      expect(discoverYourStyleMockComponent).toHaveBeenCalled();
+      expect(element).toBeInTheDocument();
+    });
+  });
+
+  describe("When it is instantiated with the Gallery route", () => {
+
+    const galleryMockComponent = jest.fn().mockReturnValue(<h1>Gallery</h1>);
+    jest.mock("../gallery/gallery.page", () => galleryMockComponent);
+
+    let element: HTMLElement;
+
+    beforeEach(async () => {
+      await act(async () => {
+        render(
+          <Router initialEntries={["/gallery"]} initialIndex={0}>
+            <AppRoutes></AppRoutes>
+          </Router>
+        );
+      });
+
+      element = screen.getByText("Gallery");
+    });
+
+    test("Then it should be in the document", () => {
+      expect(galleryMockComponent).toHaveBeenCalled();
+      expect(element).toBeInTheDocument();
+    });
+  });
+
+  describe("When it is instantiated with the WhoAreWe route", () => {
+
+    const whoAreWeMockComponent = jest.fn().mockReturnValue(<h1>Who are we?</h1>);
+    jest.mock("../who.are.we/who.are.we.page", () => whoAreWeMockComponent);
+
+    let element: HTMLElement;
+
+    beforeEach(async () => {
+      await act(async () => {
+        render(
+          <Router initialEntries={["/whoAreWe"]} initialIndex={0}>
+            <AppRoutes></AppRoutes>
+          </Router>
+        );
+      });
+
+      element = screen.getByText("Who are we?");
+    });
+
+    test("Then it should be in the document", () => {
+      expect(whoAreWeMockComponent).toHaveBeenCalled();
+      expect(element).toBeInTheDocument();
+    });
+  });
+
 
   describe("When it is instantiated with the LogInAndSignUp route", () => {
     const loginMockComponent = jest.fn().mockReturnValue(<h1>Login</h1>);
@@ -101,6 +176,31 @@ describe('Given the AppRoutes component', () => {
 
     test("Then it should be in the document", () => {
       expect(formMockComponent).toHaveBeenCalled();
+      expect(element).toBeInTheDocument();
+    });
+  });
+
+  describe("When it is instantiated with the ModifyForm route", () => {
+
+    const modifyFormMockComponent = jest.fn().mockReturnValue(<h1>Edit form</h1>);
+    jest.mock("../edit.form/edit.form", () => modifyFormMockComponent);
+
+    let element: HTMLElement;
+
+    beforeEach(async () => {
+      await act(async () => {
+        render(
+          <Router initialEntries={["/edit/:id"]} initialIndex={0}>
+            <AppRoutes></AppRoutes>
+          </Router>
+        );
+      });
+
+      element = screen.getByText("Edit form");
+    });
+
+    test("Then it should be in the document", () => {
+      expect(modifyFormMockComponent).toHaveBeenCalled();
       expect(element).toBeInTheDocument();
     });
   });

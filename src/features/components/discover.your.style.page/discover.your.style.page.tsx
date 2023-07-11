@@ -1,9 +1,9 @@
+import { Header } from "../header/header";
 import { NavOptions } from "../../types/nav.options";
 import { Footer } from "../footer/footer";
-import { Header } from "../header/header";
-import { DanceCourseCreateForm } from "./danceCourse.create.form/danceCourse.create.form";
+import style from "../contact/contact.module.css"
 
-export default function Form() {
+export default function DiscoverYourStylePage() {
 
   const options: NavOptions[] = [
     { url: '/', label: 'HOME' },
@@ -14,11 +14,21 @@ export default function Form() {
     { url: '/contact', label: 'CONTACT' },
   ];
 
-  return (
+  return(
     <>
       <Header options={options}></Header>
-      <DanceCourseCreateForm></DanceCourseCreateForm>
+
+      <section className={style.errorSection}>
+
+        <div className={style.errorContainer}>
+          <div className={style.error404ImageContainer}>
+            <img className={style.error404Image} src="/assets/404Error.jpg" alt="404 Error Image" />
+          </div>
+        </div>
+
+      </section>
+
       <Footer></Footer>
     </>
-  )
+  );
 }

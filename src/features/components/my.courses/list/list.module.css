@@ -1,6 +1,8 @@
 .danceCoursesContainer {
   display: flex;
   justify-content: center;
+  background-color: #363333;
+  background-image: linear-gradient(to bottom left, #343232, #111010);
 }
 
 .danceCourseList {

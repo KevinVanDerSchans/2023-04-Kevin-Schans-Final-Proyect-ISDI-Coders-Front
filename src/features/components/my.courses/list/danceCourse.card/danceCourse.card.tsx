@@ -3,8 +3,9 @@ import { DanceCourse } from "../../../../models/danceCourse";
 import style from "./danceCourse.card.module.css"
 import { useDanceCourses } from "../../../../hooks/use.danceCourses";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faPenToSquare, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { store } from "../../../../../core/store/store";
+import Swal from "sweetalert2";
 
 type Propstype = {
   item: DanceCourse,
@@ -21,14 +22,36 @@ export function DanceCourseCard({ item }: Propstype) {
       (item: DanceCourse) => item.id === id) as DanceCourse;
 
     deleteDanceCourses(danceCourseFull.id)
+
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      iconColor: 'red',
+      title: 'Course deleted!',
+      showConfirmButton: false,
+      timer: 1800,
+      color: 'white',
+        background:
+          "linear-gradient(to left, rgb(146, 36, 36), rgba(0, 0, 0))"
+    })
   }
 
   return (
-
     <article className={style.articleContainer}>
 
-      <div className={style.itemContainer}>
+      {
+        admin === 'admin' ?
+        <div className={style.editButtonContainer}>
+           <Link to={"/edit/" + item.id}>
+            <button className={style.editButton}>
+              <FontAwesomeIcon className={style.editIcon} icon={faPenToSquare} size="2xl" style={{color: "#e9eaec",}} />
+            </button>
+          </Link>
+        </div>
+        : ""
+      }
 
+      <div className={style.itemContainer}>
         <Link to={"/details/" + item.id}>
           <li key={item.id} className={style.product}>
 
@@ -68,7 +91,6 @@ export function DanceCourseCard({ item }: Propstype) {
             <FontAwesomeIcon className={style.deleteIcon} icon={faTrash} size="2xl" style={{color: "#e9eaec",}} />
           </button>
         </div>
-
         : ""
       }
 

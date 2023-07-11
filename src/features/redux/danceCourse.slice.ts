@@ -31,6 +31,13 @@ export const createDanceCoursesAsync = createAsyncThunk<
   return await repo.create(danceCourse);
 });
 
+export const updateDanceCourseAsync = createAsyncThunk<
+DanceCourse,
+{ repo: DanceCourseRepository; id: DanceCourse["id"]; danceCourse: Partial<DanceCourse>}
+>("danceCourse/update", async ({ repo, id, danceCourse }) => {
+  return await repo.update(id, danceCourse);
+})
+
 export const deleteDanceCourseAsync = createAsyncThunk<
   string,
   { repo: DanceCourseRepository; id: DanceCourse["id"] }
@@ -63,6 +70,13 @@ const danceCoursesSlice = createSlice({
     builder.addCase(createDanceCoursesAsync.fulfilled, (state, { payload }) => ({
       ...state,
       danceCourses: [...state.items, payload]
+    }));
+
+    builder.addCase(updateDanceCourseAsync.fulfilled, (state, { payload }) => ({
+      ...state,
+      danceCourses: state.danceCourses.map((item) =>
+      item.id === payload.id ? payload : item
+      ),
     }));
 
     builder.addCase(deleteDanceCourseAsync.fulfilled, (state, { payload }) => {

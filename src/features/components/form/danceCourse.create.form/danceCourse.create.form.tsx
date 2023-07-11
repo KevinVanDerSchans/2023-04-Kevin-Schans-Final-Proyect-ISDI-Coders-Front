@@ -41,7 +41,7 @@ export function DanceCourseCreateForm() {
               <h1 className={style.formTitle}>Create a new course</h1>
             </div>
 
-            <form className={style.createForm} onSubmit={handleSubmit}>
+            <form className={style.createForm} onSubmit={handleSubmit} aria-label="form">
 
               <div className={style.firstInputsContainer}>
                 <div className={style.inputContainer}>

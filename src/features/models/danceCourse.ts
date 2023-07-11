@@ -4,9 +4,9 @@ import { Video } from "../types/video";
 export type DanceCourse = {
   id: string,
   courseName: string,
-  level: 'Beginner' | 'Intermediate' | 'Advanced',
+  level: string,
   priceCourse: string,
-  totalClasses: number,
+  totalClasses: string,
   initialDescription: string,
   largeDescription: string,
   image: Image,

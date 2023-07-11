@@ -25,6 +25,19 @@ export class DanceCourseRepository {
     return response.json() as Promise<DanceCourse>;
   }
 
+  async update(id: DanceCourse["id"], item: Partial<DanceCourse>): Promise<DanceCourse> {
+    const response = await fetch(this.url + "/" + id, {
+      method: "PATCH",
+      body: JSON.stringify(item),
+      headers: {
+        "Content-Type": "application/json",
+      }
+    });
+
+    const updateDanceCourse = await response.json();
+    return updateDanceCourse as DanceCourse;
+  }
+
   async delete(id: DanceCourse["id"]): Promise<boolean> {
     const response = await fetch(this.url + "/" + id, {
       method: "DELETE",

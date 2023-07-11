@@ -2,6 +2,8 @@
   width: 100%;
   justify-content: center;
   text-align: center;
+  background-color: #363333;
+  background-image: linear-gradient(to bottom left, #444242, #0f0f0f);
 }
 
 .showTopCoursesContainer {

@@ -51,9 +51,6 @@
 
 .danceCourseDetailsDanceCourseName {
   display: flex;
-}
-
-.danceCourseDetailsDanceCourseName {
   font-size: 4rem;
   font-weight: 800;
   color: rgb(238, 237, 237);

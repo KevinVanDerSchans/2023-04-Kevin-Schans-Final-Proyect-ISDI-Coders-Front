@@ -3,9 +3,9 @@ import { Routes, Route } from 'react-router-dom';
 
 const Home = lazy(() => import('../home/home'));
 const MyCourses = lazy(() => import('../my.courses/my.courses'));
-const DiscoverYourStylePage = lazy(() => import('../discover.your.style.page/discover.your.style.page'));
-const Gallery = lazy(() => import('../gallery/gallery.page'));
-const WhoAreWe = lazy(() => import('../who.are.we/who.are.we.page'));
+const DiscoverYourStylePage = lazy(() => import('../contact/contact'));
+const Gallery = lazy(() => import('../contact/contact'));
+const WhoAreWe = lazy(() => import('../contact/contact'));
 const Contact = lazy(() => import('../contact/contact'));
 
 const FormPage = lazy(() => import('../form/form.page'));

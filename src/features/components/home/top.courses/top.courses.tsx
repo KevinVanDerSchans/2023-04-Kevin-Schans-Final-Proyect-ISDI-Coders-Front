@@ -6,7 +6,7 @@ export function TopCourses() {
   return (
     <section className={style.showTopCourses}>
       <div className={style.showTopCoursesContainer}>
-        <h3 className={style.topCoursesTitle}>TOP COURSES</h3>
+        <h2 className={style.topCoursesTitle}>TOP COURSES</h2>
         <div className={style.listOfDances}>
 
           <article className={style.topCoursesDance}>

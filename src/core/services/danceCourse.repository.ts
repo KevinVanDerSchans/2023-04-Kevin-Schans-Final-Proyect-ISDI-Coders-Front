@@ -20,7 +20,10 @@ export class DanceCourseRepository {
     const response = await fetch(this.url + "/", {
       method: "POST",
       body: item,
-    });
+      headers: {
+        Authorization: "Bearer " + this.token
+    },
+  });
 
     return response.json() as Promise<DanceCourse>;
   }
@@ -30,8 +33,9 @@ export class DanceCourseRepository {
       method: "PATCH",
       body: JSON.stringify(item),
       headers: {
+        Authorization: "Bearer " + this.token,
         "Content-Type": "application/json",
-      }
+      },
     });
 
     const updateDanceCourse = await response.json();

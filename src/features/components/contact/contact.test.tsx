@@ -23,7 +23,6 @@ describe('Given the Contact component', () => {
       expect(headerElement).toBeInTheDocument();
     });
 
-
     test('Then it should be in the document', () => {
       const headerElement = screen.getByRole('banner');
       expect(headerElement).toBeInTheDocument();

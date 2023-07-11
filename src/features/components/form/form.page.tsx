@@ -8,7 +8,10 @@ export default function Form() {
   const options: NavOptions[] = [
     { url: '/', label: 'HOME' },
     { url: '/myCourses', label: 'MY COURSES' },
-    { url: '/contact', label: 'CONTACT '}
+    { url: '/contact', label: 'DISCOVER YOUR STYLE'},
+    { url: '/contact', label: 'GALLERY' },
+    { url: '/contact', label: 'WHO ARE WE?'},
+    { url: '/contact', label: 'CONTACT' },
   ];
 
   return (

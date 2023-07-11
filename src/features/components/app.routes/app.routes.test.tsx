@@ -55,7 +55,6 @@ describe('Given the AppRoutes component', () => {
     });
   });
 
-
   describe("When it is instantiated with the LogInAndSignUp route", () => {
     const loginMockComponent = jest.fn().mockReturnValue(<h1>Login</h1>);
     jest.mock("../logInAndSignUp/log.in.and.sign.up", () => loginMockComponent);
@@ -101,6 +100,31 @@ describe('Given the AppRoutes component', () => {
 
     test("Then it should be in the document", () => {
       expect(formMockComponent).toHaveBeenCalled();
+      expect(element).toBeInTheDocument();
+    });
+  });
+
+  describe("When it is instantiated with the ModifyForm route", () => {
+
+    const modifyFormMockComponent = jest.fn().mockReturnValue(<h1>Edit form</h1>);
+    jest.mock("../edit.form/edit.form", () => modifyFormMockComponent);
+
+    let element: HTMLElement;
+
+    beforeEach(async () => {
+      await act(async () => {
+        render(
+          <Router initialEntries={["/edit/:id"]} initialIndex={0}>
+            <AppRoutes></AppRoutes>
+          </Router>
+        );
+      });
+
+      element = screen.getByText("Edit form");
+    });
+
+    test("Then it should be in the document", () => {
+      expect(modifyFormMockComponent).toHaveBeenCalled();
       expect(element).toBeInTheDocument();
     });
   });

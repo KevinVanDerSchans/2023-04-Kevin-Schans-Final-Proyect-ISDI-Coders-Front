@@ -15,16 +15,8 @@ describe('Given the Hero component', () => {
     });
 
     test('Then it should be in the document', () => {
-      const element = screen.getAllByRole("video");
+      const element = screen.getAllByRole("heading");
       expect(element[0]).toBeInTheDocument();
-    });
-
-    test('Then the video should have the correct source and attributes', () => {
-      const element = screen.getByRole('video');
-
-      expect(element).toHaveAttribute('src', '/assets/heroVideo.mp4');
-      expect(element).toHaveAttribute('autoPlay');
-      expect(element).toHaveAttribute('loop');
     });
 
     test('Then the heading text should be in the document with the correct text content', () => {

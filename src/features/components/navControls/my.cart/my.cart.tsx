@@ -5,9 +5,9 @@ import style from "../my.cart/my.cart.module.css"
 
 export function MyCart() {
   return (
-    <Link to='/'>
+    <Link to='/' >
       <div className={style.myCartContainer}>
-        <FontAwesomeIcon className={style.myCartIcon} icon={faCartShopping} size="2x" style={{color: "#ddd5d5"}} aria-label="Online shopping cart for dance courses"/>
+        <FontAwesomeIcon className={style.myCartIcon} icon={faCartShopping} size="2x" style={{color: "#ddd5d5"}} role="icon" aria-hidden="true" aria-label="Online shopping cart for dance courses"/>
       </div>
     </Link>
   );

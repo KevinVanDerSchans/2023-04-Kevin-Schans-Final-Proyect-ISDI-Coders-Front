@@ -6,7 +6,7 @@ export function LearnOnline() {
     <section className={style.learnOnline}>
       <div className={style.learnOnlineContainer}>
         <div className={style.learnOnlineImageContainer}>
-          <img className={style.learnOnlineImage} src="/assets/studyOnline.jpeg" alt="Student learning online" style={{width:"100%", height:"30em"}} />
+          <img className={style.learnOnlineImage} src="/assets/learnOnline.jpg" alt="Student learning online" style={{width:"100%", height:"30em"}} />
         </div>
 
         <div className={style.learnOnlineText}>

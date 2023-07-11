@@ -1,5 +1,5 @@
 .learnOnline {
-  background-color: rgb(242, 242, 245);
+  background-color: rgb(238, 238, 239);
 }
 
 .learnOnlineContainer {
@@ -9,7 +9,7 @@
 
 .learnOnlineImageContainer {
   display: flex;
-  width: 70%;
+  width: 54%;
   justify-content: left;
 }
 
@@ -20,12 +20,12 @@
 .learnOnlineText {
   display: flex;
   width: 100%;
-  max-width: 40%;
+  max-width: 44%;
   flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: center;
-  padding: 0 15px;
+  padding: 0 14px 0 22px;
 }
 
 .online {

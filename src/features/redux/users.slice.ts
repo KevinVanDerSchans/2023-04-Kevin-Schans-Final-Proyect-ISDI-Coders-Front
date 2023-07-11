@@ -31,7 +31,12 @@ export const loginUserAsync = createAsyncThunk<
   { repo: UserRepository;  user: Partial<User> }
 >("users/login", async ({ repo, user }) => {
   const result = await repo.login(user);
-  localStorage.setItem("userToken", result.token as string);
+  const loginUser = {
+    token: result.token,
+    role: result.user.role,
+  }
+
+  localStorage.setItem("userToken", JSON.stringify(loginUser));
   return result;
 });
 

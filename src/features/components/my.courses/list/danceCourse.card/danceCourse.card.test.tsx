@@ -12,7 +12,7 @@ const mockDanceCourse = {
   courseName: 'line salsa',
   level: 'Intermediate',
   priceCourse: '19,99',
-  totalClasses: 10,
+  totalClasses: "10",
   initialDescription: 'abc',
   largeDescription: "abcdef",
   image: {

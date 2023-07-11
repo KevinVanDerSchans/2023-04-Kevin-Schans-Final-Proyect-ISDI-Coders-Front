@@ -2,9 +2,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { useMemo, useCallback } from "react";
 import { RootState, AppDispatch } from "../../core/store/store";
 import { DanceCourseRepository } from "../../core/services/danceCourse.repository";
-import { loadDanceCoursesAsync, createDanceCoursesAsync, deleteDanceCourseAsync } from "../redux/danceCourse.slice";
+import { loadDanceCoursesAsync, createDanceCoursesAsync, deleteDanceCourseAsync, updateDanceCourseAsync } from "../redux/danceCourse.slice";
 import { DanceCourse } from "../models/danceCourse";
-
 
 export function useDanceCourses() {
 
@@ -26,6 +25,10 @@ export function useDanceCourses() {
     await dispatch(createDanceCoursesAsync({ repo, danceCourse }));
   };
 
+  const updateDanceCourses = async (id: DanceCourse["id"], danceCourse: Partial<DanceCourse>) => {
+    await dispatch(updateDanceCourseAsync({ repo, id, danceCourse }))
+  }
+
   const deleteDanceCourses = async (id: DanceCourse["id"]) => {
     await dispatch(deleteDanceCourseAsync({ repo, id}));
   }
@@ -34,6 +37,7 @@ export function useDanceCourses() {
     danceCourses,
     loadDanceCourses,
     createDanceCourses,
+    updateDanceCourses,
     deleteDanceCourses,
   };
 }

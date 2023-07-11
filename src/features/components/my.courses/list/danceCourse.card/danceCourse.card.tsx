@@ -13,8 +13,6 @@ type Propstype = {
 
 export function DanceCourseCard({ item }: Propstype) {
 
-  //const location = useLocation();
-
   const admin = store.getState().users.role;
 
   const { deleteDanceCourses, danceCourses } = useDanceCourses();

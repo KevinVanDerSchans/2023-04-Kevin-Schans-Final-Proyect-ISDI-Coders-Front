@@ -10,21 +10,21 @@ export function TopCourses() {
         <div className={style.listOfDances}>
 
           <article className={style.topCoursesDance}>
-            <h4 className={style.titleDance}>LINE SALSA</h4>
+            <h3 className={style.titleDance}>LINE SALSA</h3>
             <Link to="/myCourses">
               <button className={style.topCoursesButton}>More info</button>
             </Link>
           </article>
 
           <article className={style.topCoursesDance}>
-            <h4 className={style.titleDance}>BACHATA</h4>
+            <h3 className={style.titleDance}>BACHATA</h3>
             <Link to="/myCourses">
               <button className={style.topCoursesButton}>More info</button>
             </Link>
           </article>
 
           <article className={style.topCoursesDance}>
-            <h4 className={style.titleDance}>HIP HOP</h4>
+            <h3 className={style.titleDance}>HIP HOP</h3>
             <Link to="/myCourses">
               <button className={style.topCoursesButton}>More info</button>
             </Link>

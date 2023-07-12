@@ -1,6 +1,7 @@
 import { UserRepository } from "../../core/services/user.repository";
 import { store } from "../../core/store/store";
 import { User } from "../models/user";
+import { ApiAnswer } from "../types/api.response";
 import { ac, loginUserAsync, registerUserAsync } from "./users.slice";
 
 describe("Given the users slice reducer", () => {
@@ -8,9 +9,11 @@ describe("Given the users slice reducer", () => {
 
     const user = {} as Partial<User>;
 
+    const loginUser = { user: { userName: 'erik' } } as unknown as ApiAnswer;
+
     const repo: UserRepository = {
       register: jest.fn(),
-      login: jest.fn(),
+      login: jest.fn().mockResolvedValueOnce(loginUser)
     } as unknown as UserRepository;
 
     test("Then it should dispach the registerUserAsync", () => {

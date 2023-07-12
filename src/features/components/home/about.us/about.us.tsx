@@ -9,7 +9,7 @@ export function AboutUs() {
 
         <div className={style.aboutUsButtonContainer}>
           <Link to="/contact">
-            <span className={style.aboutUsButton}>About us!</span>
+            <span className={style.aboutUsButton}>Contact us!</span>
           </Link>
         </div>
       </div>

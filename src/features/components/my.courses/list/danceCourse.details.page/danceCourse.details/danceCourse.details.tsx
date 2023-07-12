@@ -24,9 +24,7 @@ export function DanceCourseDetails() {
   return (
     <>
     <section className={style.danceCourseDetailsSection}>
-
       <div className={style.danceCourseDetailsContainer}>
-
         <div className={style.danceCourseDetailsMediaContainer}>
 
           <div className={style.buttonToMyCoursesPageContainer}>
@@ -34,10 +32,9 @@ export function DanceCourseDetails() {
           </div>
 
           <div className={style.danceCourseDetailsVideoContainer}>
-
             <video muted={muted} src={item.video.url} autoPlay loop className={style.danceCourseDetailsVideo}></video>
-
           </div>
+
         </div>
 
         <div className={style.controlMusicButtonContainer}>

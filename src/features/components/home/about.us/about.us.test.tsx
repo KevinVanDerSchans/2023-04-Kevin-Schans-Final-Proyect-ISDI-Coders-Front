@@ -21,7 +21,7 @@ describe('Given the AboutUs component', () => {
     });
 
     test('Then the button element should navigate to "/" link', () => {
-      const buttonElement = screen.getByText('About us!');
+      const buttonElement = screen.getByText('Contact us!');
       expect(buttonElement).toBeInTheDocument();
 
       fireEvent.click(buttonElement);

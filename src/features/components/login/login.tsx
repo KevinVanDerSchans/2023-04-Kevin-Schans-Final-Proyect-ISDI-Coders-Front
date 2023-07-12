@@ -70,7 +70,7 @@ export default function Login() {
         timer: 2000,
       });
       setTimeout(() => {
-        navigate("/");
+        navigate("/myCourses");
       }, 2000);
     }
   }, [loginError, navigate]);

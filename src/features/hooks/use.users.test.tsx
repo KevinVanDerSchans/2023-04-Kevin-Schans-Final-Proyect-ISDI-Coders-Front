@@ -9,6 +9,7 @@ import { MemoryRouter as Router } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
 
+
 const mockUser = {
   userName: "Erik",
   email: "erikvdsd@hotmail.com",
@@ -55,12 +56,10 @@ describe("Given the useUsers custom hook", () => {
 
   describe("When it is rendered", () => {
     test("Then the handleRegisterUser function should be called", async () => {
+
       await act(async () => {
         await userEvent.click(elements[0]);
-
-        await act(async () => {
-          store.dispatch(registerUserAsync({ repo: mockRepo, user: mockUser }))
-        });
+        store.dispatch(registerUserAsync({ repo: mockRepo, user: mockUser }));
         expect(mockRepo.register).toHaveBeenCalled();
       });
     });
@@ -68,18 +67,14 @@ describe("Given the useUsers custom hook", () => {
     test("Then the handleLoginUser function should be called", async () => {
       await act(async () => {
         await userEvent.click(elements[1]);
-
-        await act(async () => {
-          store.dispatch(loginUserAsync({ repo: mockRepo, user: mockUser }));
-        });
-
+        store.dispatch(loginUserAsync({ repo: mockRepo, user: mockUser }));
         expect(mockRepo.login).toHaveBeenCalled();
       });
     });
 
     test("Then the handleLogoutUser function should be called", async () => {
       await act(async () => {
-        await userEvent.click(elements[3]);
+        await userEvent.click(elements[2]);
         store.dispatch(ac.logoutUser());
     });
   });

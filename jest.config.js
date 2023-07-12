@@ -18,5 +18,7 @@ export default {
     "<rootDir>/src/features/components/app/app.tsx",
     "<rootDir>/src/core/services/danceCourse.repository.ts",
     "<rootDir>/src/features/components/edit.form/edit.form.tsx",
+    "<rootDir>/src/features/components/my.courses/list/danceCourse.details.page/danceCourse.details.page.tsx",
+    "<rootDir>/src/features/components/form/danceCourse.create.form/danceCourse.create.form.tsx",
   ],
 };

@@ -39,6 +39,7 @@ export function Hero() {
 
             <div className={style.controlMusicButtonContainer}>
               <button
+                aria-label="Enable/disable video music"
                 id="musicControl"
                 className={buttonClasses.join(' ')}
                 onClick={handleMusicControlClick}>

@@ -3,8 +3,18 @@ import { useDanceCourses } from "../../../../../hooks/use.danceCourses";
 import { DanceCourse } from "../../../../../models/danceCourse";
 import style from "./danceCourse.details.module.css";
 import { ButtonToMyCoursesPage } from "./button.to.my.courses.page/button.to.my.courses.page";
-
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMusic, faVolumeXmark } from "@fortawesome/free-solid-svg-icons";
 export function DanceCourseDetails() {
+
+  const [muted, setMuted] = useState(true);
+
+  const handleMusicControlClick = () => {
+    setMuted((prevMuted) => !prevMuted);
+  };
+
+  const buttonClasses = [muted ? "" : "controlVolume", style.customButton];
 
   const { id } = useParams();
   const { danceCourses } = useDanceCourses();
@@ -25,10 +35,34 @@ export function DanceCourseDetails() {
 
           <div className={style.danceCourseDetailsVideoContainer}>
 
-            <video src={item.video.url} muted autoPlay loop className={style.danceCourseDetailsVideo}></video>
+            <video muted={muted} src={item.video.url} autoPlay loop className={style.danceCourseDetailsVideo}></video>
 
           </div>
         </div>
+
+        <div className={style.controlMusicButtonContainer}>
+            <button
+              id="musicControl"
+              className={buttonClasses.join(' ')}
+              onClick={handleMusicControlClick}>
+              {muted ? (
+            <>
+            <FontAwesomeIcon className={style.musicOnIcon}
+              aria-label="Icon Music to put the music ON"
+              icon={faMusic}
+              beat
+              style={{ color: "#e5e5e6" }}
+            />
+            </>
+            ) : (
+            <>
+              <FontAwesomeIcon className={style.musicOffIcon}
+                icon={faVolumeXmark}
+                style={{color: "#efeff1",}} />
+            </>
+            )}
+            </button>
+          </div>
 
         <div className={style.danceCourseDetailsInformationContainer}>
 
@@ -53,9 +87,7 @@ export function DanceCourseDetails() {
           <div className={style.danceCourseDetailsLargeDescriptionContainer}>
             <p className={style.danceCourseDetailsLargeDescription}>{item.largeDescription}</p>
           </div>
-
         </div>
-
       </div>
     </section>
     </>

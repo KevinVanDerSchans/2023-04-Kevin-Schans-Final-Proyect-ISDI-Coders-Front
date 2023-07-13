@@ -7,8 +7,9 @@ import {
   deleteDanceCourseAsync,
 } from "./danceCourse.slice";
 
-describe("Given the users slice reducer", () => {
+describe("Given the DanceCourse slice reducer", () => {
   describe("When it is instantiated", () => {
+
     const mockDanceCourse = {
       id: "1",
       courseName: "line salsa",
@@ -36,19 +37,13 @@ describe("Given the users slice reducer", () => {
     } as unknown as DanceCourseRepository;
 
 
-    test("Then it should dispatch the createFilmAsync", () => {
+    test("Then it should dispatch the createDanceCoursesAsync", () => {
       store.dispatch(createDanceCoursesAsync({ repo: mockRepo, danceCourse: mockDanceCourse }));
       expect(mockRepo.create).toHaveBeenCalled();
     });
 
-    test("Then it should dispatch the deleteFilmAsync", () => {
+    test("Then it should dispatch the deleteDanceCourseAsync", () => {
       store.dispatch(deleteDanceCourseAsync({ repo: mockRepo, id: mockId }));
-      expect(mockRepo.delete).toHaveBeenCalled();
-    });
-
-    test("Then it should dispatch the deleteFilmAsync", () => {
-      mockRepo.delete = jest.fn().mockResolvedValue(false);
-      store.dispatch(deleteDanceCourseAsync({ repo: mockRepo, id: "3" }));
       expect(mockRepo.delete).toHaveBeenCalled();
     });
   });

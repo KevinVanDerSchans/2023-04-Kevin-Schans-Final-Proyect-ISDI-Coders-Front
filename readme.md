@@ -2,7 +2,7 @@
 ## Kevin van der Schans | Proyecto Final ISDI Coders - Front
 <br>
 
-<img src="/public/assets/readme.png" alt="Alex & Melanie Home image" width="900">
+<img src="/public/assets/readme-photo.png" alt="Alex & Melanie Home image" width="1200">
 
 <br>
 

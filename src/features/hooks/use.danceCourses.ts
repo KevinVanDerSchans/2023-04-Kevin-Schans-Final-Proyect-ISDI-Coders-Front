@@ -4,7 +4,6 @@ import { RootState, AppDispatch } from "../../core/store/store";
 import { DanceCourseRepository } from "../../core/services/danceCourse.repository";
 import { loadDanceCoursesAsync, createDanceCoursesAsync, deleteDanceCourseAsync, updateDanceCourseAsync } from "../redux/danceCourse.slice";
 import { DanceCourse } from "../models/danceCourse";
-import { url } from "../../config";
 
 export function useDanceCourses() {
 
@@ -13,12 +12,14 @@ export function useDanceCourses() {
 
   const dispatch: AppDispatch = useDispatch();
 
+  const url = "http://localhost:4545/danceCourse";
+
   const repo: DanceCourseRepository = useMemo(
     () => new DanceCourseRepository(url, token as string), [token]
   );
 
   const loadDanceCourses = useCallback(async () => {
-    await dispatch(loadDanceCoursesAsync( {repo, url: url + "danceCourse"} ));
+    await dispatch(loadDanceCoursesAsync(repo));
   }, [repo, dispatch]);
 
   const createDanceCourses = async (danceCourse: FormData ) => {

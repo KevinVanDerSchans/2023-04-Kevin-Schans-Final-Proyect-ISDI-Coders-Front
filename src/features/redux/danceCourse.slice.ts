@@ -1,7 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { DanceCourse } from "../models/danceCourse";
 import { DanceCourseRepository } from "../../core/services/danceCourse.repository";
-import { ApiAnswer, GetDanceCoursePayload } from "../types/api.response";
 
 export type DanceCourseState = {
   danceCourses: DanceCourse[],
@@ -17,10 +16,10 @@ const initialState: DanceCourseState = {
   items: [] as DanceCourse[],
 };
 
-export const loadDanceCoursesAsync = createAsyncThunk<ApiAnswer, GetDanceCoursePayload>(
+export const loadDanceCoursesAsync = createAsyncThunk(
   "danceCourses/load",
-  async ({ repo, url, level }) => {
-    const response = await repo.query(url, level);
+  async (repo: DanceCourseRepository) => {
+    const response = await repo.query();
     return response;
   }
 );
@@ -65,7 +64,7 @@ const danceCoursesSlice = createSlice({
 
     builder.addCase(loadDanceCoursesAsync.fulfilled, (state, { payload }) => ({
       ...state,
-      danceCourses: payload.items,
+      danceCourses: payload,
     }));
 
     builder.addCase(createDanceCoursesAsync.fulfilled, (state, { payload }) => ({

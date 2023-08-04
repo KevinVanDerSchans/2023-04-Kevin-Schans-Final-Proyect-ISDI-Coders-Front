@@ -9,7 +9,7 @@ export function useUsers() {
   const { users, currentUser, token, loginError } = useSelector((state: RootState) => state.users);
   const dispatch: AppDispatch = useDispatch();
 
-  const url = "http://localhost:4545/";
+  const url = "https://kevin-schans-alexandmelanie.onrender.com/user";
 
   const repo: UserRepository = useMemo(() => new UserRepository(url), []);
 

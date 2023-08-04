@@ -4,6 +4,7 @@ import { RootState, AppDispatch } from "../../core/store/store";
 import { DanceCourseRepository } from "../../core/services/danceCourse.repository";
 import { loadDanceCoursesAsync, createDanceCoursesAsync, deleteDanceCourseAsync, updateDanceCourseAsync } from "../redux/danceCourse.slice";
 import { DanceCourse } from "../models/danceCourse";
+import { url } from "../../config";
 
 export function useDanceCourses() {
 
@@ -12,13 +13,12 @@ export function useDanceCourses() {
 
   const dispatch: AppDispatch = useDispatch();
 
-  const url = "https://kevin-schans-alexandmelanie.onrender.com/danceCourse";
-
   const repo: DanceCourseRepository = useMemo(
-    () => new DanceCourseRepository(url, token as string), [token]);
+    () => new DanceCourseRepository(url, token as string), [token]
+  );
 
   const loadDanceCourses = useCallback(async () => {
-    await dispatch(loadDanceCoursesAsync(repo));
+    await dispatch(loadDanceCoursesAsync( {repo, url: url + "danceCourse"} ));
   }, [repo, dispatch]);
 
   const createDanceCourses = async (danceCourse: FormData ) => {

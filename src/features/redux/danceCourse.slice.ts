@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { DanceCourse } from "../models/danceCourse";
 import { DanceCourseRepository } from "../../core/services/danceCourse.repository";
+import { ApiAnswer, GetDanceCoursePayload } from "../types/api.response";
 
 export type DanceCourseState = {
   danceCourses: DanceCourse[],
@@ -16,10 +17,10 @@ const initialState: DanceCourseState = {
   items: [] as DanceCourse[],
 };
 
-export const loadDanceCoursesAsync = createAsyncThunk(
+export const loadDanceCoursesAsync = createAsyncThunk<ApiAnswer, GetDanceCoursePayload>(
   "danceCourses/load",
-  async (repo: DanceCourseRepository) => {
-    const response = await repo.query();
+  async ({ repo, url, level }) => {
+    const response = await repo.query(url, level);
     return response;
   }
 );
@@ -32,9 +33,9 @@ export const createDanceCoursesAsync = createAsyncThunk<
 });
 
 export const updateDanceCourseAsync = createAsyncThunk<
-DanceCourse,
-{ repo: DanceCourseRepository; id: DanceCourse["id"]; danceCourse: Partial<DanceCourse>}
->("danceCourse/update", async ({ repo, id, danceCourse }) => {
+  DanceCourse,
+  { repo: DanceCourseRepository; id: DanceCourse["id"]; danceCourse: Partial<DanceCourse>}
+  >("danceCourse/update", async ({ repo, id, danceCourse }) => {
   return await repo.update(id, danceCourse);
 })
 
@@ -64,7 +65,7 @@ const danceCoursesSlice = createSlice({
 
     builder.addCase(loadDanceCoursesAsync.fulfilled, (state, { payload }) => ({
       ...state,
-      danceCourses: payload,
+      danceCourses: payload.items,
     }));
 
     builder.addCase(createDanceCoursesAsync.fulfilled, (state, { payload }) => ({

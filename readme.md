@@ -60,10 +60,10 @@ Before running the backend of this application, make sure you have the following
 
 Once you have installed the dependencies, follow these steps to configure and run the backend:
 
-1. Clone the repository: `git clone https://github.com/KevinVanDerSchans/2023-04-Kevin-Schans-Final-Proyect-ISDI-Coders-Front.git`
+1. Clone the repository: `git clone https://github.com/KevinVanDerSchans/2023-04-Kevin-Schans-Final-Project-ISDI-Coders-Front.git`
 <br>
 
-2. Navigate to the project directory: `cd 2023-04-Kevin-Schans-Final-Proyect-ISDI-Coders-Front.git`
+2. Navigate to the project directory: `cd 2023-04-Kevin-Schans-Final-Project-ISDI-Coders-Front.git`
 <br>
 
 3. Install dependencies: `npm install`
@@ -72,13 +72,17 @@ Once you have installed the dependencies, follow these steps to configure and ru
 4. Set environment variables: Create an .env file in the root directory of the project and set the required environment variables. See the .env.example file for a list of required variables.
 <br>
 
-5. Start the server: `npm run dev`. LOCALHOST !!
+5. Start a development server: `npm run dev`.
+
+<br>
+
+The application will be available at [localhost:5173](http://localhost:5173) of your browser.
 
 <br>
 
 ## Link to Backend Repository
 
-https://github.com/KevinVanDerSchans/2023-04-Kevin-Schans-Final-Proyect-ISDI-Coders-Back
+https://github.com/KevinVanDerSchans/2023-04-Kevin-Schans-Final-Project-ISDI-Coders-Back
 
 <br>
 

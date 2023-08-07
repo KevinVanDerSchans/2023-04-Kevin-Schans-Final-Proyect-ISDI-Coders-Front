@@ -1,134 +1,148 @@
-# Alex & Melanie
-## Kevin van der Schans | Proyecto Final ISDI Coders - Front
-<br>
+# Alex & Melanie - Frontend | React-Redux / TypeScript
 
-<img src="/public/assets/readme-photo.png" alt="Alex & Melanie Home image" width="1200">
+## Kevin van der Schans | ISDI Coders Final Project 2023
 
 <br>
 
-**_Alex & Melanie_** es una API WEB de **cursos online de bailes latinos**.
-
-<br>
-<br>
-
-## Link al despliegue en Vercel:
-
-https://kevin-van-der-schans-final-project-front-202304-mad.vercel.app/
-
-<br>
-<br>
-
-## Link a Render
-
-https://kevin-schans-alexandmelanie.onrender.com/
-
-<br>
-<br>
-
-# Índice
-
-1. [Título del proyecto, nombre del desarrollador y descripción del proyecto](#alex--melanie)
-
-2. [Link al despliegue en Vercel](#link-al-despliegue-en-vercel)
-
-3. [Link a Render](#link-a-render)
-
-4. [Scripts](#scripts)
-
-5. [Estado del proyecto](#estado-del-proyecto)
-
-6. [Funcionalidades de usuario/administrador](#funcionalidades)
-
-7. [Tecnologías y recursos utilizados](#tecnologías-y-recursos-utilizados)
-
-8. [Listado de componentes](#listado-de-componentes)
-
-9. [Entities y rutas del back-end](#entities-y-rutas-del-back-end)
-
-10. [Desarrollador del proyecto](#desarrollador-del-proyecto)
-
-<br>
-<br>
-
-## Scripts
+<p align="center">
+  <img src="public/assets/readme-gif-front.gif" alt="Alex & Melanie Home image" width="750">
+</p>
 
 <br>
 
-`npm run dev`: starts a development server
+**_Alex & Melanie_** is a Desktop API WEB of an **e-commerce of online courses of Latin dances**.
 
-`npm run build`: builds the app
 
-`npm run preview`: runs the built app
+The user will be able to register and log in to the website, where they will be able to view 24 different types of dance courses.
 
-<br>
-<br>
 
-## Estado del proyecto
+In addition, it has a user with ADMINISTRATOR role to perform a **CRUD** (create, edit and delete a course) to update the content.
 
-<br>
 
-![Badge en Desarrollo](https://img.shields.io/badge/STATUS-EN%20DESARROLLO-red)
+### The frontend of this application is responsible for the user interface and user interaction.
+It is built with the **React.js** framework with **Redux** and using technologies such as **TypeScript**, **JavaScript**, **HTML** and **CSS**. It is responsible for:
 
-<br>
-<br>
+- **Intuitive user interface**: The frontend provides an intuitive and easy-to-use user interface for users to interact with the application and view the list of online Latin dance courses with their respective information.
 
-## Funcionalidades
+- **Data visualization**: data is displayed in a clear and organized manner, using appropriate components and styles.
+
+- **Real-time interaction**: the frontend allows real-time interaction with the backend, updating data and displaying feedback to the user in real time.
 
 <br>
 
-En esta ***primera fase*** del proyecto...
+# Index
+
+1. [Project title and description](#alex--melanie---frontend--react-redux--typescript)
+
+2. [Project installation](#project-installation)
+
+3. [Link to Backend Repository](#link-to-backend-repository)
+
+4. [Project status](#project-status)
+
+5. [Features](#features)
+
+6. [Contribution](#contribution)
+
+7. [Project Developer](#project-developer)
 
 <br>
 
-El ***usuario*** podrá:
+## Project installation
 
-- **Registrarse** como usuario e **iniciar sesión** en la página.
+Before running the backend of this application, make sure you have the following dependencies installed:
 
-- Dirigirse a la sección **MY COURSES** y podrá visualizar una **lista** de todos los cursos online.
-
-- Si decide dar *click* en cualquiera de ellos, se creará una página de **Details** dinámicamente para visualizar los **detalles** de dicho curso.
-
-- En las siguientes implementaciones de la ***primera fase*** el usuario podrá añadir a favoritos cualquier curso y tener una lista propia.
+- Node.js: [Download and install Node.js](https://nodejs.org)
+- MongoDB: [Download and install MongoDB](https://www.mongodb.com)
+- Git: [Download and install Git](https://git-scm.com/)
 
 <br>
 
-El ***administrador*** podrá:
+Once you have installed the dependencies, follow these steps to configure and run the backend:
 
-- Realizar las **mismas funcionalidades** que un usuario.
-
-- **Crear** un curso nuevo. En el caso de que tenga el usuario un rol de administrador, se renderizará un enlace **Create a new course** donde habrá un formulario para crear un ítem nuevo. Será necesario, aparte de los datos, una imagen y un video.
-
-- **Borrar** un curso. De igual forma que el enlace anterior, se renderizará en la card del ítem un botón para borrarlo.
-
-<br>
+1. Clone the repository: `git clone https://github.com/KevinVanDerSchans/2023-04-Kevin-Schans-Final-Proyect-ISDI-Coders-Front.git`
 <br>
 
-## Tecnologías y recursos utilizados
-
-- React
-- TypeScript
-- JavaScript
-- Jest
-- Vite
-
-<br>
+2. Navigate to the project directory: `cd 2023-04-Kevin-Schans-Final-Proyect-ISDI-Coders-Front.git`
 <br>
 
-## Listado de componentes
-
-https://www.notion.so/202304-isdi-coders/Listado-de-componentes-Proyecto-Final-Kevin-Schans-d23deab710cb4d5c8e150dedafefa220
-
-<br>
+3. Install dependencies: `npm install`
 <br>
 
-## Entities y rutas del back-end
-
-https://www.notion.so/202304-isdi-coders/Entities-y-rutas-del-back-end-Proyecto-Final-Kevin-Schans-a8eff9e7e1364b38a8a957a5b1a2ac58
-
-<br>
+4. Set environment variables: Create an .env file in the root directory of the project and set the required environment variables. See the .env.example file for a list of required variables.
 <br>
 
-## Desarrollador del proyecto
+5. Start the server: `npm run dev`. LOCALHOST !!
+
+<br>
+
+## Link to Backend Repository
+
+https://github.com/KevinVanDerSchans/2023-04-Kevin-Schans-Final-Proyect-ISDI-Coders-Back
+
+<br>
+
+## Project status
+
+<br>
+
+![Badge en Desarrollo](https://img.shields.io/badge/STATUS-UNDER%20DEVELOPMENT-red)
+
+<br>
+
+## Features
+
+<br>
+
+In this ***first phase*** of the project...
+
+<br>
+
+The ***user*** will be able to:
+
+- **Register** as a user and **log in** to the web site.
+
+- Go to **MY COURSES** section and will be able to see a **list** of all the online courses.
+
+- If the user decides to click on any of them, a **Details** page will be dynamically created to display the **details** of that course.
+
+- In the following implementations of the ***first phase*** the user will be able to bookmark any course and have a list of his own.
+
+<br>
+
+The ***administrator*** will be able to:
+
+- Perform the **same functionalities** as a user.
+
+- **Create** a new course. In case the user has an administrator role, a link **Create a new course** will be rendered where there will be a form to create a new item. In addition to the data, an image and a video will be required.
+
+- **Edit** an existing course. As an administrator, in each item of the list you will be able to see a button to edit it. This button will navigate to a form where it will dynamically collect the existing data of that item, so that you can modify them as you wish. Then, by clicking on **Update** button, the item will be permanently updated.
+
+- **Delete** a course. In the same way as the previous link, next to the Edit button, a button will be rendered on the item's card to delete it from the list and from the database.
+
+<br>
+
+## Contribution
+
+If you want to contribute to this project, follow these steps:
+
+1. Perform a fork to the repository.
+<br>
+
+2. Create a branch for your feature or bugfix: `git checkout -b feature/your-feature-name`
+<br>
+
+3. Make the necessary changes and commits:  `git commit -am 'Add some feature'`
+<br>
+
+4. Push to branch: `git push origin feature/your-feature-name`
+<br>
+
+5. Send a pull request to the original repository.
+
+<br>
+
+## Project developer
 
 <br>
 

@@ -28,24 +28,25 @@ export default function Register() {
         background:
           "linear-gradient(to left, rgb(146, 36, 36), rgba(0, 0, 0))",
         imageAlt: 'Feedback alert for error register.',
-        showConfirmButton: true,
+        showConfirmButton: false,
+        timer: 3000,
       });
 
     } else {
       handleRegisterUser(data);
-      formElement.reset();
+      window.location.reload();
 
       Swal.fire({
         position: 'center',
         icon: 'success',
         title: `Welcome ${data.userName} !`,
         text: 'Account successfully created.',
-        showConfirmButton: true,
+        showConfirmButton: false,
         color: 'white',
         background:
           "linear-gradient(to bottom, rgb(146, 36, 36), rgba(0, 0, 0))",
         imageAlt: 'Feedback alert for successfully register.',
-
+        timer: 3000,
       });
     }
   };

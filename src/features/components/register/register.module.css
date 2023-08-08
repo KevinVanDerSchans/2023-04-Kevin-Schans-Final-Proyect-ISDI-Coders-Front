@@ -33,7 +33,7 @@
 .formInput[type="text"],
 .formInput[type="password"],
 .formInput[type="email"] {
-  width: 8.4em;
+  width: 8.2em;
   margin-left: 10px;
   border: none;
   border-bottom: 2px solid #ccc;

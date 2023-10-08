@@ -59,7 +59,6 @@ const danceCoursesSlice = createSlice({
       page: state.page - 1,
     }),
   },
-
   extraReducers: (builder) => {
 
     builder.addCase(loadDanceCoursesAsync.fulfilled, (state, { payload }) => ({

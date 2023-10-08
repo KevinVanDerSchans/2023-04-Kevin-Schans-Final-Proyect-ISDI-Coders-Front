@@ -2,10 +2,16 @@ import { ApiAnswer } from "../../features/types/api.response";
 import { DanceCourse } from "../../features/models/danceCourse";
 
 export class DanceCourseRepository {
-  constructor(public url: string, public token: string) {}
+  constructor(public url: string, public token: string) {
+    this.url += "danceCourse";
+  }
 
-  async query(): Promise<DanceCourse[]> {
-    const response = await fetch(this.url);
+  async query(url = this.url): Promise<DanceCourse[]> {
+    let urlToSend = '';
+
+    urlToSend = url;
+
+    const response = await fetch(urlToSend);
 
     if (!response.ok) {
       const message = `Error: ${response.status}; ${response.statusText}`;

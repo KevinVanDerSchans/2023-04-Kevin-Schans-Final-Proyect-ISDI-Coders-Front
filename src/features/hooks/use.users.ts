@@ -4,12 +4,11 @@ import { useMemo } from "react";
 import { ac, loginUserAsync, registerUserAsync } from "../redux/users.slice";
 import { User } from "../models/user";
 import { UserRepository } from "../../core/services/user.repository";
+import { url } from "../../config";
 
 export function useUsers() {
   const { users, currentUser, token, loginError } = useSelector((state: RootState) => state.users);
   const dispatch: AppDispatch = useDispatch();
-
-  const url = "http://localhost:4545/";
 
   const repo: UserRepository = useMemo(() => new UserRepository(url), []);
 

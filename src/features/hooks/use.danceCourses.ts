@@ -4,11 +4,9 @@ import { RootState, AppDispatch } from "../../core/store/store";
 import { DanceCourseRepository } from "../../core/services/danceCourse.repository";
 import { loadDanceCoursesAsync, createDanceCoursesAsync, deleteDanceCourseAsync, updateDanceCourseAsync } from "../redux/danceCourse.slice";
 import { DanceCourse } from "../models/danceCourse";
-// import { url } from "../../config";
+import { url } from "../../config";
 
 export function useDanceCourses() {
-
-  const url = 'https://alex-and-melanie.vercel.app/';
 
   const { danceCourses } = useSelector((state: RootState) => state.danceCourses);
   const { token } = useSelector((state: RootState) => state.users)

@@ -3,7 +3,6 @@ import { DanceCourse } from "../../features/models/danceCourse";
 
 export class DanceCourseRepository {
   constructor(public url: string, public token: string) {
-    console.log(this.url)
     this.url += "danceCourse";
   }
 

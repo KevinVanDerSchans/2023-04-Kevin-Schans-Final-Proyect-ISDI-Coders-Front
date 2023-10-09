@@ -3,15 +3,15 @@ import { DanceCourse } from "../../features/models/danceCourse";
 
 export class DanceCourseRepository {
   constructor(public url: string, public token: string) {
+    console.log(this.url)
     this.url += "danceCourse";
   }
 
   async query(url = this.url): Promise<DanceCourse[]> {
-    let urlToSend = '';
+    console.log(url)
 
-    urlToSend = url;
-
-    const response = await fetch(urlToSend);
+    const response = await fetch(url);
+    console.log(response)
 
     if (!response.ok) {
       const message = `Error: ${response.status}; ${response.statusText}`;
@@ -19,6 +19,7 @@ export class DanceCourseRepository {
     }
 
     const answer = (await response.json()) as ApiAnswer;
+    console.log(answer)
     return answer.items;
   }
 

@@ -1,1 +1,1 @@
-export const url = import.meta.env.VITE_FRONT_URL;
+export const url = import.meta.env.VITE_BACK_URL;

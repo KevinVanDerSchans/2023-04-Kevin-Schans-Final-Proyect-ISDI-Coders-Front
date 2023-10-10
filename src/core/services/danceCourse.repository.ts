@@ -7,10 +7,8 @@ export class DanceCourseRepository {
   }
 
   async query(url = this.url): Promise<DanceCourse[]> {
-    console.log(url)
 
     const response = await fetch(url);
-    console.log(response)
 
     if (!response.ok) {
       const message = `Error: ${response.status}; ${response.statusText}`;
@@ -18,7 +16,6 @@ export class DanceCourseRepository {
     }
 
     const answer = (await response.json()) as ApiAnswer;
-    console.log(answer)
     return answer.items;
   }
 

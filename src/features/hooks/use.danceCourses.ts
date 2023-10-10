@@ -16,7 +16,6 @@ export function useDanceCourses() {
   const repo: DanceCourseRepository = useMemo(
     () => new DanceCourseRepository(url, token as string), [token]
   );
-  console.log(url)
 
   const loadDanceCourses = useCallback(async () => {
     await dispatch(loadDanceCoursesAsync(repo));

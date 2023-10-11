@@ -51,7 +51,7 @@ export function NavControls() {
         admin === 'admin' ?
           <div className={style.createANewCourseButtonContainer}>
             <Link to="/form">
-              <button className={style.createANewCourseButton}>Create new course</button>
+              <button style={{pointerEvents: 'auto'}} className={style.createANewCourseButton}>Create new course</button>
             </Link>
           </div>
 
@@ -60,7 +60,7 @@ export function NavControls() {
 
       { token ? (
         <>
-          <button onClick={handleUser} className={style.logOutButton}>Log out</button>
+          <button onClick={handleUser} style={{pointerEvents: 'auto'}} className={style.logOutButton}>Log out</button>
         </>
       ) : (
         <>

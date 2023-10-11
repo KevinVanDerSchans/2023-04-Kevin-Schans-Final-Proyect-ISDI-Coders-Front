@@ -17,6 +17,7 @@
   font-size: 3.2rem;
   text-align: center;
   color: rgb(234, 233, 233);
+  user-select: none;
 }
 
 .listOfDances {
@@ -73,6 +74,7 @@
 .titleDance {
   font-size: 2.8em;
   margin-top: 40px;
+  user-select: none;
 }
 
 .topCoursesButton {

@@ -64,6 +64,7 @@
   font-size: 2rem;
   font-weight: 800;
   color: rgb(167, 164, 164);
+  user-select: none;
 }
 
 .danceCourseDetailsCoursePriceContainer {
@@ -75,6 +76,7 @@
   font-weight: 700;
   color: rgb(229, 232, 97);
   margin: 0 40px 0 30px;
+  user-select: none;
 }
 
 .addToCartButton {
@@ -84,7 +86,7 @@
   padding: 20px 14px;
   font-weight: 700;
   transition: linear .3s;
-  cursor: hover;
+  cursor: pointer;
   border-radius: 8px;
   border: 2px solid rgb(238, 233, 233);
   box-shadow: 2px 2px 10px rgb(0, 0, 0);
@@ -103,6 +105,7 @@
 
 .danceCourseDetailsTotalClasses {
   font-size: 1.4rem;
+  user-select: none;
 }
 
 .danceCourseDetailsLargeDescriptionContainer {
@@ -112,6 +115,7 @@
 .danceCourseDetailsLargeDescription {
   font-size: 1.4rem;
   font-style: italic;
+  user-select: none;
 }
 
 .controlMusicButtonContainer {

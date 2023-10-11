@@ -39,6 +39,7 @@ export function DanceCourseDetails() {
 
         <div className={style.controlMusicButtonContainer}>
             <button
+              style={{cursor: 'pointer'}}
               aria-label="Enable/disable video music"
               id="musicControl"
               className={buttonClasses.join(' ')}

@@ -8,7 +8,6 @@ export function Footer() {
 
       <div className={style.textFooterContainer}>
         <span className={style.dancersNames}>Alex & Melanie © 2023</span>
-        <address className={style.companyName}>Kevin Schans | ISDI Coders</address>
       </div>
 
       <div className={style.socialMediaFooterContainer}>

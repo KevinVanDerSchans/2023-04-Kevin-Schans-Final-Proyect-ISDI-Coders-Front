@@ -31,6 +31,7 @@
 h1 {
   font-size: 2.8rem;
   color: rgb(243, 242, 242);
+  user-select: none;
 }
 
 .heroLink {
@@ -79,4 +80,5 @@ h1 {
 
 .customButton:hover {
   background-color: rgb(20, 20, 20);
+  cursor: pointer;
 }

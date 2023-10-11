@@ -16,6 +16,7 @@
   color: white;
   text-align: center;
   font-family: inherit;
+  user-select: none;
 }
 
 .registerFormContainer {

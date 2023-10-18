@@ -3,6 +3,7 @@ import { DanceCourse } from "../models/danceCourse";
 import { DanceCourseRepository } from "../../core/services/danceCourse.repository";
 
 export type DanceCourseState = {
+  getDanceCourseState: "loading" | "loaded" | null;
   danceCourses: DanceCourse[],
   count: number,
   page: number,
@@ -10,6 +11,7 @@ export type DanceCourseState = {
 };
 
 const initialState: DanceCourseState = {
+  getDanceCourseState: null,
   danceCourses: [] as DanceCourse[],
   count: 0,
   page: 1,
@@ -64,6 +66,12 @@ const danceCoursesSlice = createSlice({
     builder.addCase(loadDanceCoursesAsync.fulfilled, (state, { payload }) => ({
       ...state,
       danceCourses: payload,
+      getDanceCourseState: "loaded",
+    }));
+
+    builder.addCase(loadDanceCoursesAsync.pending, (state) => ({
+      ...state,
+      getDanceCourseState: "loading",
     }));
 
     builder.addCase(createDanceCoursesAsync.fulfilled, (state, { payload }) => ({

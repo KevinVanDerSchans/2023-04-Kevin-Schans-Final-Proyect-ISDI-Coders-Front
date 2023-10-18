@@ -14,7 +14,7 @@ export default function ModifyForm() {
   const options: NavOptions[] = [
     { url: '/', label: 'HOME' },
     { url: '/myCourses', label: 'MY COURSES' },
-    { url: '/contact', label: 'GALLERY' },
+    { url: '/gallery', label: 'GALLERY' },
     { url: '/contact', label: 'CONTACT' },
   ];
 

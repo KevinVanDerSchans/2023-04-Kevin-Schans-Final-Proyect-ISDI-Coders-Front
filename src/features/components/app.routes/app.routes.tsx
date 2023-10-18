@@ -1,5 +1,6 @@
 import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import Contact from '../contact/contact';
 
 const Home = lazy(() => import('../home/home'));
 const MyCourses = lazy(() => import('../my.courses/my.courses'));
@@ -16,8 +17,8 @@ export function AppRoutes() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/myCourses' element={<MyCourses></MyCourses>}></Route>
-        <Route path='/discoverYourStyle' element={<Gallery></Gallery>}></Route>
         <Route path='/gallery' element={<Gallery></Gallery>}></Route>
+        <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path='/*' element={<Gallery></Gallery>}></Route>
 
         <Route path='/logInAndSignUp' element={<LogInAndSignUp></LogInAndSignUp>}></Route>

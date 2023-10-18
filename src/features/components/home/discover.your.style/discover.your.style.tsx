@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import style from "./discover.your.style.module.css";
 
 export function DiscoverYourStyle() {
@@ -8,20 +7,14 @@ export function DiscoverYourStyle() {
         <img className={style.discoverYourStyleImage} src="/assets/discoverYourStyle.jpg" alt="Discover Your Style image section. Woman and man dancing surrounded by lights." />
 
         <div className={style.discoverYourStyleTextContainer}>
-          <h4 className={style.discoverYourStyleTitle}>DISCOVER YOUR STYLE!</h4>
+          <h4 className={style.discoverYourStyleTitle}>BENEFITS OF DANCING</h4>
 
           <ul className={style.discoverYourStyleList}>
-            <li className={style.discoverYourStyleItemList} aria-label="Fire icon">🔥 100% FREE</li>
-            <li className={style.discoverYourStyleItemList} aria-label="Arrow icon">⏩ Easy and fast</li>
-            <li className={style.discoverYourStyleItemList} aria-label="Cross-icon">❌ NO commitment</li>
-            <li className={style.discoverYourStyleItemList} aria-label="Infinity icon">♾️ Do it as many times as you want!</li>
+            <li className={style.discoverYourStyleItemList} aria-label="Fire icon">🔥 Physical conditioning</li>
+            <li className={style.discoverYourStyleItemList} aria-label="Cross-icon">🧠 Mental stimulation</li>
+            <li className={style.discoverYourStyleItemList} aria-label="Infinity icon">🍻 Helps to meet and socialize!</li>
+            <li className={style.discoverYourStyleItemList} aria-label="Arrow icon">🤸‍♀️ Improves balance and coordination</li>
           </ul>
-
-          <div className={style.discoverYourStyleButtonContainer}>
-            <Link to="/discoverYourStyle" target="_blank">
-              <span className={style.discoverYourStyleButton}>LET'S GO!</span>
-            </Link>
-          </div>
         </div>
       </div>
     </section>

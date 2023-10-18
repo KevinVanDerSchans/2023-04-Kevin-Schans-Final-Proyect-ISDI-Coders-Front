@@ -10,7 +10,7 @@
   color:rgb(117, 117, 102);
   background-color: rgb(71, 68, 67);
   z-index: -1;
-  margin-left: 5.2em;
+  margin-left: 4em;
 }
 
 .navList {
@@ -18,7 +18,7 @@
 }
 
 .navLabel {
-  padding: 3px 60px;
+  padding: 3px 80px;
   font-weight: 600;
   padding-bottom: 3px;
 }

@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 const Home = lazy(() => import('../home/home'));
 const MyCourses = lazy(() => import('../my.courses/my.courses'));
-const Contact = lazy(() => import('../contact/contact'));
+const Gallery = lazy(() => import('../gallery/gallery'));
 
 const FormPage = lazy(() => import('../form/form.page'));
 const ModifyForm = lazy(() => import('../edit.form/edit.form'))
@@ -16,10 +16,9 @@ export function AppRoutes() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/myCourses' element={<MyCourses></MyCourses>}></Route>
-        <Route path='/discoverYourStyle' element={<Contact></Contact>}></Route>
-        <Route path='/gallery' element={<Contact></Contact>}></Route>
-        <Route path='/whoAreWe' element={<Contact></Contact>}></Route>
-        <Route path='/*' element={<Contact></Contact>}></Route>
+        <Route path='/discoverYourStyle' element={<Gallery></Gallery>}></Route>
+        <Route path='/gallery' element={<Gallery></Gallery>}></Route>
+        <Route path='/*' element={<Gallery></Gallery>}></Route>
 
         <Route path='/logInAndSignUp' element={<LogInAndSignUp></LogInAndSignUp>}></Route>
         <Route path='/details/:id' element={<DanceCourseDetailsPage></DanceCourseDetailsPage>}></Route>

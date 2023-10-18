@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { MemoryRouter as Router } from "react-router-dom";
-import Contact from "../contact/contact"
+import Gallery from "./gallery";
 import { Provider } from "react-redux";
 import { store } from "../../../core/store/store";
 
@@ -12,7 +12,7 @@ describe('Given the Contact component', () => {
       render(
         <Provider store={store}>
           <Router>
-            <Contact></Contact>
+            <Gallery></Gallery>
           </Router>
         </Provider>
       );

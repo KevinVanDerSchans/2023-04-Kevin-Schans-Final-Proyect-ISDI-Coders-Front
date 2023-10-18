@@ -1,15 +1,14 @@
 import { Header } from "../header/header";
 import { NavOptions } from "../../types/nav.options";
 import { Footer } from "../footer/footer";
-import style from "../contact/contact.module.css"
+import style from "../gallery/gallery.module.css"
 
-export default function Contact() {
+export default function Gallery() {
 
   const options: NavOptions[] = [
     { url: '/', label: 'HOME' },
     { url: '/myCourses', label: 'MY COURSES' },
     { url: '/gallery', label: 'GALLERY' },
-    { url: '/whoAreWe', label: 'WHO ARE WE?'},
     { url: '/contact', label: 'CONTACT' },
   ];
 

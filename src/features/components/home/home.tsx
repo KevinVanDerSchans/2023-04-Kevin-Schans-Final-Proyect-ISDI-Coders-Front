@@ -12,7 +12,6 @@ export default function Home() {
     { url: '/', label: 'HOME' },
     { url: '/myCourses', label: 'MY COURSES' },
     { url: '/contact', label: 'GALLERY' },
-    { url: '/contact', label: 'WHO ARE WE?'},
     { url: '/contact', label: 'CONTACT' },
   ];
 

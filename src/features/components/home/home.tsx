@@ -8,10 +8,11 @@ import { DiscoverYourStyle } from './discover.your.style/discover.your.style';
 import { AboutUs } from './about.us/about.us';
 
 export default function Home() {
+
   const options: NavOptions[] = [
     { url: '/', label: 'HOME' },
     { url: '/myCourses', label: 'MY COURSES' },
-    { url: '/contact', label: 'GALLERY' },
+    { url: '/gallery', label: 'GALLERY' },
     { url: '/contact', label: 'CONTACT' },
   ];
 

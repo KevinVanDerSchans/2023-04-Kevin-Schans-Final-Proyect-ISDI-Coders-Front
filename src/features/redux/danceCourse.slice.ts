@@ -7,6 +7,7 @@ export type DanceCourseState = {
   count: number,
   page: number,
   items: DanceCourse[]
+  getDanceCourseState: "loading" | "loaded" | null;
 };
 
 const initialState: DanceCourseState = {
@@ -14,6 +15,7 @@ const initialState: DanceCourseState = {
   count: 0,
   page: 1,
   items: [] as DanceCourse[],
+  getDanceCourseState: null,
 };
 
 export const loadDanceCoursesAsync = createAsyncThunk(
@@ -64,6 +66,12 @@ const danceCoursesSlice = createSlice({
     builder.addCase(loadDanceCoursesAsync.fulfilled, (state, { payload }) => ({
       ...state,
       danceCourses: payload,
+      getDanceCourseState: "loaded",
+    }));
+
+    builder.addCase(loadDanceCoursesAsync.pending, (state) => ({
+      ...state,
+      getDanceCourseState: "loading",
     }));
 
     builder.addCase(createDanceCoursesAsync.fulfilled, (state, { payload }) => ({

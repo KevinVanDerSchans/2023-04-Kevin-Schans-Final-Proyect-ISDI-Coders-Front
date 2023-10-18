@@ -3,19 +3,19 @@ import { DanceCourse } from "../models/danceCourse";
 import { DanceCourseRepository } from "../../core/services/danceCourse.repository";
 
 export type DanceCourseState = {
+  getDanceCourseState: "loading" | "loaded" | null;
   danceCourses: DanceCourse[],
   count: number,
   page: number,
   items: DanceCourse[]
-  getDanceCourseState: "loading" | "loaded" | null;
 };
 
 const initialState: DanceCourseState = {
+  getDanceCourseState: null,
   danceCourses: [] as DanceCourse[],
   count: 0,
   page: 1,
   items: [] as DanceCourse[],
-  getDanceCourseState: null,
 };
 
 export const loadDanceCoursesAsync = createAsyncThunk(

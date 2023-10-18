@@ -15,7 +15,6 @@ export default function ModifyForm() {
     { url: '/', label: 'HOME' },
     { url: '/myCourses', label: 'MY COURSES' },
     { url: '/contact', label: 'GALLERY' },
-    { url: '/contact', label: 'WHO ARE WE?'},
     { url: '/contact', label: 'CONTACT' },
   ];
 

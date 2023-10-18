@@ -11,7 +11,7 @@ export function TopCourses() {
 
           <article className={style.topCoursesDance}>
             <h3 className={style.titleDance}>LINE SALSA</h3>
-            <Link to="/myCourses">
+            <Link to="myCourses">
               <button className={style.topCoursesButton}>More info</button>
             </Link>
           </article>

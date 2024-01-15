@@ -1,6 +1,6 @@
-# Alex & Melanie - Frontend | React-Redux / TypeScript
+# Alex & Melanie - Freelancer project
 
-## Kevin van der Schans | ISDI Coders Final Project 2023
+## Frontend | React-Redux / TypeScript
 
 <br>
 
@@ -18,15 +18,15 @@ The user will be able to register and log in to the website, where they will be 
 
 In addition, it has a user with ADMINISTRATOR role to perform a **CRUD** (create, edit and delete a course) to update the content.
 
+<br>
 
-### The frontend of this application is responsible for the user interface and user interaction.
-It is built with the **React.js** framework with **Redux** and using technologies such as **TypeScript**, **JavaScript**, **HTML** and **CSS**. It is responsible for:
+### The frontend is built with **React**, **Redux**, **TypeScript**, **JavaScript**, **Jest** and **sweetaler2**. It is responsible for:
 
-- **Intuitive user interface**: The frontend provides an intuitive and easy-to-use user interface for users to interact with the application and view the list of online Latin dance courses with their respective information.
+- **Intuitive user interface**: provides an intuitive and easy-to-use user interface for users to interact with the application and view the list of online Latin dance courses with their respective information.
 
 - **Data visualization**: data is displayed in a clear and organized manner, using appropriate components and styles.
 
-- **Real-time interaction**: the frontend allows real-time interaction with the backend, updating data and displaying feedback to the user in real time.
+- **Real-time interaction**: allows real-time interaction with the backend, updating data and displaying feedback to the user in real time.
 
 <br>
 
@@ -60,10 +60,10 @@ Before running the backend of this application, make sure you have the following
 
 Once you have installed the dependencies, follow these steps to configure and run the backend:
 
-1. Clone the repository: `git clone https://github.com/KevinVanDerSchans/2023-04-Kevin-Schans-Final-Project-ISDI-Coders-Front.git`
+1. Clone the repository: `git clone https://github.com/KevinVanDerSchans/frontend-alex-melanie.git`
 <br>
 
-2. Navigate to the project directory: `cd 2023-04-Kevin-Schans-Final-Project-ISDI-Coders-Front.git`
+2. Navigate to the project directory: `cd frontend-alex-melanie.git`
 <br>
 
 3. Install dependencies: `npm install`
@@ -82,7 +82,7 @@ The application will be available at [localhost:5173](http://localhost:5173) of 
 
 ## Link to Backend Repository
 
-https://github.com/KevinVanDerSchans/2023-04-Kevin-Schans-Final-Project-ISDI-Coders-Back
+https://github.com/KevinVanDerSchans/backend-alex-melanie.git
 
 <br>
 
@@ -90,15 +90,11 @@ https://github.com/KevinVanDerSchans/2023-04-Kevin-Schans-Final-Project-ISDI-Cod
 
 <br>
 
-![Badge en Desarrollo](https://img.shields.io/badge/STATUS-UNDER%20DEVELOPMENT-red)
+![COMPLETED](https://img.shields.io/badge/COMPLETED-green.svg)
 
 <br>
 
 ## Features
-
-<br>
-
-In this ***first phase*** of the project...
 
 <br>
 
@@ -109,8 +105,6 @@ The ***user*** will be able to:
 - Go to **MY COURSES** section and will be able to see a **list** of all the online courses.
 
 - If the user decides to click on any of them, a **Details** page will be dynamically created to display the **details** of that course.
-
-- In the following implementations of the ***first phase*** the user will be able to bookmark any course and have a list of his own.
 
 <br>
 

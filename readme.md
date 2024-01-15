@@ -61,16 +61,12 @@ Before running the backend of this application, make sure you have the following
 Once you have installed the dependencies, follow these steps to configure and run the backend:
 
 1. Clone the repository: `git clone https://github.com/KevinVanDerSchans/frontend-alex-melanie.git`
-<br>
 
 2. Navigate to the project directory: `cd frontend-alex-melanie.git`
-<br>
 
 3. Install dependencies: `npm install`
-<br>
 
 4. Set environment variables: Create an .env file in the root directory of the project and set the required environment variables. See the .env.example file for a list of required variables.
-<br>
 
 5. Start a development server: `npm run dev`.
 
@@ -125,16 +121,12 @@ The ***administrator*** will be able to:
 If you want to contribute to this project, follow these steps:
 
 1. Perform a fork to the repository.
-<br>
 
 2. Create a branch for your feature or bugfix: `git checkout -b feature/your-feature-name`
-<br>
 
 3. Make the necessary changes and commits:  `git commit -am 'Add some feature'`
-<br>
 
 4. Push to branch: `git push origin feature/your-feature-name`
-<br>
 
 5. Send a pull request to the original repository.
 
